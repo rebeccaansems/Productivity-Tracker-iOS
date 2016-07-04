@@ -14,8 +14,24 @@ namespace Productivity_Tracker_iOS
 	[Register ("SummaryViewController")]
 	partial class SummaryViewController
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextView t_SummaryLeast { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextView t_SummaryMost { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (t_SummaryLeast != null) {
+				t_SummaryLeast.Dispose ();
+				t_SummaryLeast = null;
+			}
+			if (t_SummaryMost != null) {
+				t_SummaryMost.Dispose ();
+				t_SummaryMost = null;
+			}
 		}
 	}
 }
