@@ -15,8 +15,10 @@ namespace Productivity_Tracker_iOS
         {
         }
 
-        public override void ViewDidLoad()
+        public override void ViewDidAppear(Boolean animated)
         {
+            base.ViewDidLoad();
+
             Tuple<int, int>[] productivityHour = new Tuple<int, int>[24];
             int productiveDataPoints = 0, productivityLevelTotalHour = 0;
 

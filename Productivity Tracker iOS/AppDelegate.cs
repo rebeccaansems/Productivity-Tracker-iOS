@@ -15,10 +15,6 @@ namespace Productivity_Tracker_iOS
     {
         // class-level declarations
 
-        UIWindow window;
-        UIViewController root;
-        MainViewController main;
-
         public override UIWindow Window
         {
             get;
