@@ -15,6 +15,10 @@ namespace Productivity_Tracker_iOS
     {
         // class-level declarations
 
+        UIWindow window;
+        UIViewController root;
+        MainViewController main;
+
         public override UIWindow Window
         {
             get;
@@ -28,10 +32,12 @@ namespace Productivity_Tracker_iOS
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
+
             //do you want notifications?
             var settings = UIUserNotificationSettings.GetSettingsForTypes(UIUserNotificationType.Alert, null);
             UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+            UIApplication.SharedApplication.CancelAllLocalNotifications();
 
             //load database
             string dbName = "db.sqlite";
