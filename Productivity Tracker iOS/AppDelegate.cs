@@ -23,8 +23,17 @@ namespace Productivity_Tracker_iOS
 
         public static SQLiteConnection db;
 
+        public static int hourMin = 8, hourMax = 12 + 10;
+        public static int minuteMin, minuteMax;
+
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
+            //do you want notifications?
+            var settings = UIUserNotificationSettings.GetSettingsForTypes(UIUserNotificationType.Alert, null);
+            UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
+            UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+
+            //load database
             string dbName = "db.sqlite";
             string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); // Documents folder
             string libraryPath = Path.Combine(documentsPath, "..", "Library"); // Library folder
@@ -45,8 +54,14 @@ namespace Productivity_Tracker_iOS
 
         public override void DidEnterBackground(UIApplication application)
         {
-            // Use this method to release shared resources, save user data, invalidate timers and store the application state.
-            // If your application supports background exection this method is called instead of WillTerminate when the user quits.
+            //create/schedule notification
+            UILocalNotification notification = new UILocalNotification();
+            notification.FireDate = NSDate.FromTimeIntervalSinceNow(3600);
+            //notification.AlertTitle = "Productivity Tracker"; // required for Apple Watch notifications
+            notification.AlertAction = "Log productivity";
+            notification.AlertBody = "How productive are you feeling?";
+            notification.ApplicationIconBadgeNumber = 1;
+            UIApplication.SharedApplication.ScheduleLocalNotification(notification);
         }
 
         public override void WillEnterForeground(UIApplication application)
