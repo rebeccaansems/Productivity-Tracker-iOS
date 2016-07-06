@@ -15,7 +15,7 @@ namespace Productivity_Tracker_iOS
         {
         }
 
-        public override void ViewDidAppear(Boolean animated)
+        public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
@@ -24,6 +24,12 @@ namespace Productivity_Tracker_iOS
             b_Mediocre.TouchUpInside += MediocreClicked;
             b_Poor.TouchUpInside += PoorClicked;
             b_Terrible.TouchUpInside += TerribleClicked;
+        }
+
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+            EnableButtons();
 
             var database = AppDelegate.db.Table<ProductiveData>();
             foreach (var dataPoint in database)
@@ -68,6 +74,27 @@ namespace Productivity_Tracker_iOS
             ProductiveData p_Data = new ProductiveData { DateHour = DateTime.Now.Hour, DateDay = DateTime.Now.Day, DateMonth = DateTime.Now.Month, ProdutivityLevel = 1 };
             AppDelegate.db.Insert(p_Data);
             DisbleButtons();
+        }
+
+        void EnableButtons()
+        {
+            b_Awesome.Enabled = true;
+            b_Good.Enabled = true;
+            b_Mediocre.Enabled = true;
+            b_Poor.Enabled = true;
+            b_Terrible.Enabled = true;
+
+            b_Awesome.SetTitleColor(UIColor.FromRGB(246, 246, 246), UIControlState.Normal);
+            b_Good.SetTitleColor(UIColor.FromRGB(246, 246, 246), UIControlState.Normal);
+            b_Mediocre.SetTitleColor(UIColor.FromRGB(246, 246, 246), UIControlState.Normal);
+            b_Poor.SetTitleColor(UIColor.FromRGB(246, 246, 246), UIControlState.Normal);
+            b_Terrible.SetTitleColor(UIColor.FromRGB(246, 246, 246), UIControlState.Normal);
+
+            b_Awesome.BackgroundColor = UIColor.FromRGB(41, 128, 185);
+            b_Good.BackgroundColor = UIColor.FromRGB(41, 128, 185);
+            b_Mediocre.BackgroundColor = UIColor.FromRGB(41, 128, 185);
+            b_Poor.BackgroundColor = UIColor.FromRGB(41, 128, 185);
+            b_Terrible.BackgroundColor = UIColor.FromRGB(41, 128, 185);
         }
 
         void DisbleButtons()
