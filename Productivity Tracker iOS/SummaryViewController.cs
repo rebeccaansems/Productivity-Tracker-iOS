@@ -51,19 +51,19 @@ namespace Productivity_Tracker_iOS
                 {
                     if (bestProductivityTimes[i].Item1 > 12)
                     {
-                        summaryMostText += bestProductivityTimes[i].Item1 - 12 + "pm \n";
+                        summaryMostText += "• " + (bestProductivityTimes[i].Item1 - 12) + "pm \n";
                     }
                     else if (bestProductivityTimes[i].Item1 == 0)
                     {
-                        summaryMostText += 12 + "am \n";
+                        summaryMostText += "• " + 12 + "am \n";
                     }
                     else if (bestProductivityTimes[i].Item1 == 12)
                     {
-                        summaryMostText += 12 + "pm \n";
+                        summaryMostText += "• " + 12 + "pm \n";
                     }
                     else
                     {
-                        summaryMostText += bestProductivityTimes[i].Item1 + "am \n";
+                        summaryMostText += "• " + bestProductivityTimes[i].Item1 + "am \n";
                     }
                 }
 
@@ -72,19 +72,19 @@ namespace Productivity_Tracker_iOS
                 {
                     if (worstProductivityTimes[i].Item1 > 12)
                     {
-                        summaryWorstText += worstProductivityTimes[i].Item1 - 12 + "pm \n";
+                        summaryWorstText += "• " + (worstProductivityTimes[i].Item1 - 12) + "pm \n";
                     }
                     else if (worstProductivityTimes[i].Item1 == 0)
                     {
-                        summaryWorstText += 12 + "am \n";
+                        summaryWorstText += "• " + 12 + "am \n";
                     }
                     else if (worstProductivityTimes[i].Item1 == 12)
                     {
-                        summaryWorstText += 12 + "pm \n";
+                        summaryWorstText += "• " + 12 + "pm \n";
                     }
                     else
                     {
-                        summaryWorstText += worstProductivityTimes[i].Item1 + "am \n";
+                        summaryWorstText += "• " + worstProductivityTimes[i].Item1 + "am \n";
                     }
                 }
                 t_SummaryMost.Text = summaryMostText;

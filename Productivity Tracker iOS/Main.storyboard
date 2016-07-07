@@ -69,23 +69,23 @@
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="20" y="80" width="280" height="160"/>
+                                    <rect key="frame" x="20" y="70" width="280" height="170"/>
                                     <mask key="constraints">
-                                        <include reference="1056"/>
-                                        <include reference="1057"/>
+                                        <include reference="1602"/>
+                                        <include reference="1603"/>
                                     </mask>
                                 </variation>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                 <string key="text">10pm                                                                             11pm                                                                             12am</string>
                                 <constraints>
-                                    <constraint id="1056" firstAttribute="width" constant="280"/>
-                                    <constraint id="1057" firstAttribute="height" constant="160"/>
+                                    <constraint id="1602" firstAttribute="width" constant="280"/>
+                                    <constraint id="1603" firstAttribute="height" constant="170"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="1056"/>
-                                        <exclude reference="1057"/>
+                                        <exclude reference="1602"/>
+                                        <exclude reference="1603"/>
                                     </mask>
                                 </variation>
                             </textView>
@@ -118,23 +118,23 @@
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="20" y="320" width="280" height="160"/>
+                                    <rect key="frame" x="20" y="310" width="280" height="170"/>
                                     <mask key="constraints">
-                                        <include reference="1061"/>
-                                        <include reference="1062"/>
+                                        <include reference="1607"/>
+                                        <include reference="1608"/>
                                     </mask>
                                 </variation>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                 <string key="text">10pm                                                                             11pm                                                                             12am</string>
                                 <constraints>
-                                    <constraint id="1061" firstAttribute="width" constant="280"/>
-                                    <constraint id="1062" firstAttribute="height" constant="160"/>
+                                    <constraint id="1607" firstAttribute="width" constant="280"/>
+                                    <constraint id="1608" firstAttribute="height" constant="170"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="1061"/>
-                                        <exclude reference="1062"/>
+                                        <exclude reference="1607"/>
+                                        <exclude reference="1608"/>
                                     </mask>
                                 </variation>
                             </textView>
@@ -180,12 +180,12 @@
                                 <exclude reference="1049"/>
                                 <exclude reference="1050"/>
                                 <exclude reference="1053"/>
-                                <exclude reference="1054"/>
-                                <exclude reference="1055"/>
-                                <exclude reference="1058"/>
-                                <exclude reference="1059"/>
-                                <exclude reference="1063"/>
-                                <exclude reference="1064"/>
+                                <exclude reference="1600"/>
+                                <exclude reference="1601"/>
+                                <exclude reference="1604"/>
+                                <exclude reference="1605"/>
+                                <exclude reference="1609"/>
+                                <exclude reference="1610"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -206,12 +206,12 @@
                                 <include reference="1049"/>
                                 <include reference="1050"/>
                                 <include reference="1053"/>
-                                <include reference="1054"/>
-                                <include reference="1055"/>
-                                <include reference="1058"/>
-                                <include reference="1059"/>
-                                <include reference="1063"/>
-                                <include reference="1064"/>
+                                <include reference="1600"/>
+                                <include reference="1601"/>
+                                <include reference="1604"/>
+                                <include reference="1605"/>
+                                <include reference="1609"/>
+                                <include reference="1610"/>
                             </mask>
                         </variation>
                         <constraints>
@@ -224,12 +224,12 @@
                             <constraint id="1049" firstItem="198" firstAttribute="trailing" secondItem="473" secondAttribute="trailing"/>
                             <constraint id="1050" firstItem="473" firstAttribute="top" secondItem="198" secondAttribute="top" constant="20"/>
                             <constraint id="1053" firstItem="473" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
-                            <constraint id="1054" firstItem="198" firstAttribute="trailing" secondItem="485" secondAttribute="trailing" constant="20"/>
-                            <constraint id="1055" firstItem="485" firstAttribute="top" secondItem="198" secondAttribute="top" constant="80"/>
-                            <constraint id="1058" firstItem="485" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
-                            <constraint id="1059" firstItem="198" firstAttribute="trailing" secondItem="505" secondAttribute="trailing" constant="20"/>
-                            <constraint id="1063" firstItem="505" firstAttribute="top" secondItem="844" secondAttribute="centerY" constant="313"/>
-                            <constraint id="1064" firstItem="505" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
+                            <constraint id="1600" firstItem="198" firstAttribute="trailing" secondItem="485" secondAttribute="trailing" constant="20"/>
+                            <constraint id="1601" firstItem="485" firstAttribute="top" secondItem="198" secondAttribute="top" constant="70"/>
+                            <constraint id="1604" firstItem="485" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
+                            <constraint id="1605" firstItem="198" firstAttribute="trailing" secondItem="505" secondAttribute="trailing" constant="20"/>
+                            <constraint id="1609" firstItem="505" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
+                            <constraint id="1610" firstItem="505" firstAttribute="top" secondItem="844" secondAttribute="centerY" constant="303"/>
                         </constraints>
                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
                     </view>
@@ -625,6 +625,7 @@
                                         <exclude reference="1536"/>
                                     </mask>
                                 </variation>
+                                <connections/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="677" translatesAutoresizingMaskIntoConstraints="NO" text="Notification end time: 12:00pm">
                                 <rect key="frame" x="35" y="88" width="160" height="240"/>
@@ -675,6 +676,7 @@
                                         <exclude reference="1541"/>
                                     </mask>
                                 </variation>
+                                <connections/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="679" translatesAutoresizingMaskIntoConstraints="NO" text="Data" textAlignment="center">
                                 <rect key="frame" x="90" y="-128" width="160" height="240"/>
@@ -823,6 +825,57 @@
                                     </mask>
                                 </variation>
                             </textView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" id="1659" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="299" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="332704801.65417802">
+                                    <!--2011-07-18 18:00:01 +0000-->
+                                </date>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="242" width="320" height="225"/>
+                                    <mask key="constraints">
+                                        <include reference="6437"/>
+                                        <include reference="6438"/>
+                                    </mask>
+                                </variation>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <constraints>
+                                    <constraint id="6437" firstAttribute="width" constant="320"/>
+                                    <constraint id="6438" firstAttribute="height" constant="225"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6437"/>
+                                        <exclude reference="6438"/>
+                                    </mask>
+                                </variation>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6448" translatesAutoresizingMaskIntoConstraints="NO" customClass="UIButton">
+                                <rect key="frame" x="137" y="127" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <state key="normal" title="Change">
+                                    <color key="titleShadowColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="470" width="320" height="45"/>
+                                    <mask key="constraints">
+                                        <include reference="6453"/>
+                                        <include reference="6454"/>
+                                    </mask>
+                                </variation>
+                                <connections/>
+                                <constraints>
+                                    <constraint id="6453" firstAttribute="width" constant="320"/>
+                                    <constraint id="6454" firstAttribute="height" constant="45"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6453"/>
+                                        <exclude reference="6454"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <variation key="default">
                             <mask key="subviews">
@@ -837,6 +890,8 @@
                                 <exclude reference="688"/>
                                 <exclude reference="691"/>
                                 <exclude reference="860"/>
+                                <exclude reference="1659"/>
+                                <exclude reference="6448"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="1067"/>
@@ -876,6 +931,11 @@
                                 <exclude reference="1564"/>
                                 <exclude reference="1565"/>
                                 <exclude reference="1566"/>
+                                <exclude reference="6435"/>
+                                <exclude reference="6436"/>
+                                <exclude reference="6451"/>
+                                <exclude reference="6452"/>
+                                <exclude reference="6455"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -891,6 +951,8 @@
                                 <include reference="688"/>
                                 <include reference="691"/>
                                 <include reference="860"/>
+                                <include reference="1659"/>
+                                <include reference="6448"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="1067"/>
@@ -930,6 +992,11 @@
                                 <include reference="1564"/>
                                 <include reference="1565"/>
                                 <include reference="1566"/>
+                                <include reference="6435"/>
+                                <include reference="6436"/>
+                                <include reference="6451"/>
+                                <include reference="6452"/>
+                                <include reference="6455"/>
                             </mask>
                         </variation>
                         <constraints>
@@ -970,6 +1037,11 @@
                             <constraint id="1564" firstItem="860" firstAttribute="centerX" secondItem="688" secondAttribute="centerX" constant="5"/>
                             <constraint id="1565" firstItem="688" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
                             <constraint id="1566" firstItem="688" firstAttribute="top" secondItem="860" secondAttribute="centerY" constant="303"/>
+                            <constraint id="6435" firstItem="657" firstAttribute="trailing" secondItem="1659" secondAttribute="trailing"/>
+                            <constraint id="6436" firstItem="657" firstAttribute="bottom" secondItem="1659" secondAttribute="bottom" constant="101"/>
+                            <constraint id="6451" firstItem="657" firstAttribute="trailing" secondItem="6448" secondAttribute="trailing"/>
+                            <constraint id="6452" firstItem="657" firstAttribute="bottom" secondItem="6448" secondAttribute="bottom" constant="53"/>
+                            <constraint id="6455" firstItem="6448" firstAttribute="centerX" secondItem="657" secondAttribute="centerX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Options" id="779" image="settings.png"/>
@@ -979,6 +1051,14 @@
                         <outlet property="b_TimeMax" destination="678" id="name-outlet-678"/>
                         <outlet property="b_RemoveLastDataPoint" destination="685" id="name-outlet-685"/>
                         <outlet property="b_Clear" destination="691" id="name-outlet-691"/>
+                        <outlet property="t_TimeMin" destination="666" id="name-outlet-666"/>
+                        <outlet property="t_TimeMax" destination="677" id="name-outlet-677"/>
+                        <outlet property="v_TimePicker" destination="1659" id="name-outlet-1659"/>
+                        <outlet property="t_RemoveDataPoint" destination="682" id="name-outlet-682"/>
+                        <outlet property="t_Clear" destination="688" id="name-outlet-688"/>
+                        <outlet property="t_DataTitle" destination="679" id="name-outlet-679"/>
+                        <outlet property="t_NotificationTitle" destination="660" id="name-outlet-660"/>
+                        <outlet property="b_Save" destination="6448" id="name-outlet-6448"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="658" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -993,6 +1073,12 @@
         <image name="settings (1).png" width="24" height="24"/>
         <image name="house-outline.png" width="24" height="24"/>
         <image name="menu-button.png" width="24" height="24"/>
+        <image name="drawable-hdpi.png" width="72" height="72"/>
+        <image name="drawable-xhdpi.png" width="96" height="96"/>
+        <image name="icon72.png" width="72" height="72"/>
+        <image name="icon96.png" width="96" height="96"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-60.png" width="60" height="60"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination" type="retina4"/>
