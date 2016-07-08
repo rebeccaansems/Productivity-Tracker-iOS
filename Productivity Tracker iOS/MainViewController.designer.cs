@@ -34,6 +34,10 @@ namespace Productivity_Tracker_iOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton b_Terrible { get; set; }
 
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextView t_TitleRate { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
 			if (b_Awesome != null) {
@@ -55,6 +59,10 @@ namespace Productivity_Tracker_iOS
 			if (b_Terrible != null) {
 				b_Terrible.Dispose ();
 				b_Terrible = null;
+			}
+			if (t_TitleRate != null) {
+				t_TitleRate.Dispose ();
+				t_TitleRate = null;
 			}
 		}
 	}

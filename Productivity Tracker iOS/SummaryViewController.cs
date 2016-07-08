@@ -19,10 +19,16 @@ namespace Productivity_Tracker_iOS
         {
             base.ViewDidLoad();
 
+            t_LeastTime.Editable = false;
+            t_MostTimes.Editable = false;
+            t_SummaryLeast.Editable = false;
+            t_SummaryMost.Editable = false;
+
             Tuple<int, int>[] productivityHour = new Tuple<int, int>[24];
             int productiveDataPoints = 0, productivityLevelTotalHour = 0;
 
             var database = AppDelegate.db.Table<ProductiveData>();
+
             //fill 24 instance(hour) array with zero'd tuples 
             for (int i = 0; i < productivityHour.Length; i++)
             {

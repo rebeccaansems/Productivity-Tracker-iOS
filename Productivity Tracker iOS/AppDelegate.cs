@@ -28,7 +28,6 @@ namespace Productivity_Tracker_iOS
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-
             //do you want notifications?
             var settings = UIUserNotificationSettings.GetSettingsForTypes(UIUserNotificationType.Alert, null);
             UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
@@ -56,9 +55,19 @@ namespace Productivity_Tracker_iOS
 
         public override void DidEnterBackground(UIApplication application)
         {
+            //remove old notifications
+            UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+            UIApplication.SharedApplication.CancelAllLocalNotifications();
+
             //create/schedule notification
             UILocalNotification notification = new UILocalNotification();
-            notification.FireDate = NSDate.FromTimeIntervalSinceNow(3600);
+            DateTime hourHalfFromNow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 30, 0);
+            if (DateTime.Now.Hour + 1 < 24)
+            {
+                hourHalfFromNow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour + 1, 30, 0);
+            }
+            notification.FireDate = NSDate.FromTimeIntervalSinceNow(hourHalfFromNow.Subtract(DateTime.Now).TotalSeconds);
+
             //notification.AlertTitle = "Productivity Tracker"; // required for Apple Watch notifications
             notification.AlertAction = "Log productivity";
             notification.AlertBody = "How productive are you feeling?";
@@ -68,14 +77,11 @@ namespace Productivity_Tracker_iOS
 
         public override void WillEnterForeground(UIApplication application)
         {
-            // Called as part of the transiton from background to active state.
-            // Here you can undo many of the changes made on entering the background.
+            
         }
 
         public override void OnActivated(UIApplication application)
         {
-            // Restart any tasks that were paused (or not yet started) while the application was inactive. 
-            // If the application was previously in the background, optionally refresh the user interface.
         }
 
         public override void WillTerminate(UIApplication application)

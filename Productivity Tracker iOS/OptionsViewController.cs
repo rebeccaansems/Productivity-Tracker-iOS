@@ -6,10 +6,10 @@ using Xamarin.Forms;
 
 namespace Productivity_Tracker_iOS
 {
-	partial class OptionsViewController : UIViewController
-	{
-		public OptionsViewController (IntPtr handle) : base (handle)
-		{
+    partial class OptionsViewController : UIViewController
+    {
+        public OptionsViewController(IntPtr handle) : base(handle)
+        {
         }
 
         public override void ViewDidLoad()
@@ -22,6 +22,13 @@ namespace Productivity_Tracker_iOS
 
             b_RemoveLastDataPoint.TouchUpInside += RemoveLastPointClicked;
             b_Clear.TouchUpInside += ClearClicked;
+
+            t_Clear.Editable = false;
+            t_DataTitle.Editable = false;
+            t_NotificationTitle.Editable = false;
+            t_RemoveDataPoint.Editable = false;
+            t_TimeMax.Editable = false;
+            t_TimeMin.Editable = false;
 
             v_TimePicker.Hidden = true;
             b_Save.Hidden = true;
@@ -47,7 +54,7 @@ namespace Productivity_Tracker_iOS
             t_DataTitle.Text = "Data";
         }
 
-        void TimeMinClicked (object sender, EventArgs e)
+        void TimeMinClicked(object sender, EventArgs e)
         {
             v_TimePicker.Hidden = false;
             b_Save.Hidden = false;

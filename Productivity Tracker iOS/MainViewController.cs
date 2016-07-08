@@ -24,6 +24,8 @@ namespace Productivity_Tracker_iOS
             b_Mediocre.TouchUpInside += MediocreClicked;
             b_Poor.TouchUpInside += PoorClicked;
             b_Terrible.TouchUpInside += TerribleClicked;
+
+            t_TitleRate.Editable = false;
         }
 
         public override void ViewDidAppear(bool animated)

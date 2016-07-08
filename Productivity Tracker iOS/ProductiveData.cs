@@ -9,5 +9,6 @@ public class ProductiveData
     public int DateHour { get; set; }
     public int DateDay { get; set; }
     public int DateMonth { get; set; }
+
     public int ProdutivityLevel { get; set; }
 }
