@@ -38,6 +38,23 @@ namespace Productivity_Tracker_iOS
             t_Clear.Hidden = false;
             t_RemoveDataPoint.Hidden = false;
             t_DataTitle.Text = "Data";
+
+        }
+
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+
+            //database is empty, disable buttons
+            if (AppDelegate.db.Table<ProductiveData>().Count() == 0)
+            {
+                DisableButton(b_Clear);
+                DisableButton(b_RemoveLastDataPoint);
+            } else
+            {
+                EnableButton(b_Clear);
+                EnableButton(b_RemoveLastDataPoint);
+            }
         }
 
         void SaveClicked(object sender, EventArgs e)
@@ -47,8 +64,8 @@ namespace Productivity_Tracker_iOS
 
             b_Clear.Hidden = false;
             b_RemoveLastDataPoint.Hidden = false;
-            b_TimeMin.Enabled = true;
-            b_TimeMax.Enabled = true;
+            EnableButton(b_TimeMin);
+            EnableButton(b_TimeMax);
             t_Clear.Hidden = false;
             t_RemoveDataPoint.Hidden = false;
             t_DataTitle.Text = "Data";
@@ -61,8 +78,8 @@ namespace Productivity_Tracker_iOS
 
             b_Clear.Hidden = true;
             b_RemoveLastDataPoint.Hidden = true;
-            b_TimeMin.Enabled = false;
-            b_TimeMax.Enabled = false;
+            DisableButton(b_TimeMin);
+            DisableButton(b_TimeMax);
             t_Clear.Hidden = true;
             t_RemoveDataPoint.Hidden = true;
             t_DataTitle.Text = "Earliest Notification Time";
@@ -75,8 +92,8 @@ namespace Productivity_Tracker_iOS
 
             b_Clear.Hidden = true;
             b_RemoveLastDataPoint.Hidden = true;
-            b_TimeMin.Enabled = false;
-            b_TimeMax.Enabled = false;
+            DisableButton(b_TimeMin);
+            DisableButton(b_TimeMax);
             t_Clear.Hidden = true;
             t_RemoveDataPoint.Hidden = true;
             t_DataTitle.Text = "Latest Notification Time";
@@ -93,12 +110,34 @@ namespace Productivity_Tracker_iOS
             }
 
             AppDelegate.db.Delete<ProductiveData>(lastData.DataNum);
+            //database is empty
+            if(AppDelegate.db.Table<ProductiveData>().Count() == 0)
+            {
+                DisableButton(b_Clear);
+                DisableButton(b_RemoveLastDataPoint);
+            }
         }
 
         void ClearClicked(object sender, EventArgs e)
         {
             AppDelegate.db.DeleteAll<ProductiveData>();
             b_Clear.Enabled = false;
+            DisableButton(b_Clear);
+            DisableButton(b_RemoveLastDataPoint);
+        }
+
+        public void EnableButton(UIButton button)
+        {
+            button.Enabled = true;
+            button.SetTitleColor(UIColor.FromRGB(246, 246, 246), UIControlState.Normal);
+            button.BackgroundColor = UIColor.FromRGB(41, 128, 185);
+        }
+
+        void DisableButton(UIButton button)
+        {
+            button.Enabled = false;
+            button.SetTitleColor(UIColor.LightGray, UIControlState.Disabled);
+            button.BackgroundColor = UIColor.FromRGB(43, 43, 43);
         }
     }
 }
