@@ -38,6 +38,8 @@ namespace Productivity_Tracker_iOS
             t_Clear.Hidden = false;
             t_RemoveDataPoint.Hidden = false;
             t_DataTitle.Text = "Data";
+            t_TimeMin.Text = ConvertTime("Notification Start Time: ", AppDelegate.hourMin, AppDelegate.minuteMin);
+            t_TimeMax.Text = ConvertTime("Notification End Time: ", AppDelegate.hourMax, AppDelegate.minuteMax);
 
         }
 
@@ -50,7 +52,8 @@ namespace Productivity_Tracker_iOS
             {
                 DisableButton(b_Clear);
                 DisableButton(b_RemoveLastDataPoint);
-            } else
+            }
+            else
             {
                 EnableButton(b_Clear);
                 EnableButton(b_RemoveLastDataPoint);
@@ -59,20 +62,55 @@ namespace Productivity_Tracker_iOS
 
         void SaveClicked(object sender, EventArgs e)
         {
-            v_TimePicker.Hidden = true;
-            b_Save.Hidden = true;
+            int HourMin = 8, MinuteMin = 20, HourMax = 0, MinuteMax = 0;
+            bool saveTimes = false;
+            if (t_DataTitle.Text.Equals("Earliest Notification Time"))
+            {
+                HourMin = NSDateToDateTime(v_TimePicker.Date).Hour + 1;
+                MinuteMin = NSDateToDateTime(v_TimePicker.Date).Minute;
+                if(HourMin < AppDelegate.hourMax)
+                {
+                    saveTimes = true;
+                    AppDelegate.hourMin = HourMin;
+                    AppDelegate.minuteMin = MinuteMin;
+                }
+            }
+            else //Latest Notification Time
+            {
+                HourMax = NSDateToDateTime(v_TimePicker.Date).Hour + 1;
+                MinuteMax = NSDateToDateTime(v_TimePicker.Date).Minute;
+                if (AppDelegate.hourMin < HourMax)
+                {
+                    saveTimes = true;
+                    AppDelegate.hourMax = HourMax;
+                    AppDelegate.minuteMax = MinuteMax;
+                }
+            }
 
-            b_Clear.Hidden = false;
-            b_RemoveLastDataPoint.Hidden = false;
-            EnableButton(b_TimeMin);
-            EnableButton(b_TimeMax);
-            t_Clear.Hidden = false;
-            t_RemoveDataPoint.Hidden = false;
-            t_DataTitle.Text = "Data";
+            if (saveTimes)
+            {
+                v_TimePicker.Hidden = true;
+                b_Save.Hidden = true;
+
+                b_Clear.Hidden = false;
+                b_RemoveLastDataPoint.Hidden = false;
+                EnableButton(b_TimeMin);
+                EnableButton(b_TimeMax);
+                t_Clear.Hidden = false;
+                t_RemoveDataPoint.Hidden = false;
+                t_DataTitle.Text = "Data";
+                t_TimeMin.Text = ConvertTime("Notification Start Time: ", AppDelegate.hourMin, AppDelegate.minuteMin);
+                t_TimeMax.Text = ConvertTime("Notification End Time: ", AppDelegate.hourMax, AppDelegate.minuteMax);
+            }
+            else
+            {
+                t_DataTitle.Text = "Error: Time Mismatch";
+            }
         }
 
         void TimeMinClicked(object sender, EventArgs e)
         {
+            v_TimePicker.Date = DateTimeToNSDate(DateTime.Today.AddHours(AppDelegate.hourMin - 1).AddMinutes(AppDelegate.minuteMin));
             v_TimePicker.Hidden = false;
             b_Save.Hidden = false;
 
@@ -87,6 +125,7 @@ namespace Productivity_Tracker_iOS
 
         void TimeMaxClicked(object sender, EventArgs e)
         {
+            v_TimePicker.Date = DateTimeToNSDate(DateTime.Today.AddHours(AppDelegate.hourMax - 1).AddMinutes(AppDelegate.minuteMax));
             v_TimePicker.Hidden = false;
             b_Save.Hidden = false;
 
@@ -111,7 +150,7 @@ namespace Productivity_Tracker_iOS
 
             AppDelegate.db.Delete<ProductiveData>(lastData.DataNum);
             //database is empty
-            if(AppDelegate.db.Table<ProductiveData>().Count() == 0)
+            if (AppDelegate.db.Table<ProductiveData>().Count() == 0)
             {
                 DisableButton(b_Clear);
                 DisableButton(b_RemoveLastDataPoint);
@@ -138,6 +177,49 @@ namespace Productivity_Tracker_iOS
             button.Enabled = false;
             button.SetTitleColor(UIColor.LightGray, UIControlState.Disabled);
             button.BackgroundColor = UIColor.FromRGB(43, 43, 43);
+        }
+
+        //Conert time from 24 hour clock to 12 hour clock
+        string ConvertTime(string openingStatement, int hour, int min)
+        {
+            bool isPM = false;
+
+            if (hour > 12 && hour != 24)
+            {
+                isPM = true;
+                hour -= 12;
+            }
+            else if (hour == 0 || hour == 24)
+            {
+                hour = 12;
+                isPM = false;
+            }
+            else if (hour == 12)
+            {
+                isPM = true;
+            }
+
+            if (isPM)
+            {
+                return string.Format(openingStatement + "{0}:{1}PM", hour, min.ToString().PadLeft(2, '0'));
+            }
+            return string.Format(openingStatement + "{0}:{1}AM", hour, min.ToString().PadLeft(2, '0'));
+        }
+
+        //conversion methods - Source: http://sourcerer.tumblr.com/post/502919332/nsdate-to-datetime-and-back
+        public static DateTime NSDateToDateTime(NSDate date)
+        {
+            DateTime reference = TimeZone.CurrentTimeZone.ToLocalTime(
+                new DateTime(2001, 1, 1, 0, 0, 0));
+            return reference.AddSeconds(date.SecondsSinceReferenceDate);
+        }
+
+        public static NSDate DateTimeToNSDate(DateTime date)
+        {
+            DateTime reference = TimeZone.CurrentTimeZone.ToLocalTime(
+                new DateTime(2001, 1, 1, 0, 0, 0));
+            return NSDate.FromTimeIntervalSinceReferenceDate(
+                (date - reference).TotalSeconds);
         }
     }
 }

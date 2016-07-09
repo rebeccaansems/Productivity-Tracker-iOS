@@ -866,8 +866,8 @@
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" id="1659" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="0.0" y="299" width="320" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="332704801.65417802">
-                                    <!--2011-07-18 18:00:01 +0000-->
+                                <date key="date" timeIntervalSinceReferenceDate="489781198.923447">
+                                    <!--Sat, 09 Jul 2016 18:19:58 GMT-->
                                 </date>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <rect key="frame" x="0.0" y="242" width="320" height="225"/>
@@ -897,21 +897,21 @@
                                     <color key="titleColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="0.0" y="470" width="320" height="45"/>
+                                    <rect key="frame" x="0.0" y="458" width="320" height="60"/>
                                     <mask key="constraints">
-                                        <include reference="6453"/>
-                                        <include reference="6454"/>
+                                        <include reference="6607"/>
+                                        <include reference="6608"/>
                                     </mask>
                                 </variation>
                                 <connections/>
                                 <constraints>
-                                    <constraint id="6453" firstAttribute="width" constant="320"/>
-                                    <constraint id="6454" firstAttribute="height" constant="45"/>
+                                    <constraint id="6607" firstAttribute="width" constant="320"/>
+                                    <constraint id="6608" firstAttribute="height" constant="60"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="6453"/>
-                                        <exclude reference="6454"/>
+                                        <exclude reference="6607"/>
+                                        <exclude reference="6608"/>
                                     </mask>
                                 </variation>
                             </button>
@@ -972,9 +972,8 @@
                                 <exclude reference="1566"/>
                                 <exclude reference="6435"/>
                                 <exclude reference="6436"/>
-                                <exclude reference="6451"/>
-                                <exclude reference="6452"/>
-                                <exclude reference="6455"/>
+                                <exclude reference="6605"/>
+                                <exclude reference="6606"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1033,9 +1032,8 @@
                                 <include reference="1566"/>
                                 <include reference="6435"/>
                                 <include reference="6436"/>
-                                <include reference="6451"/>
-                                <include reference="6452"/>
-                                <include reference="6455"/>
+                                <include reference="6605"/>
+                                <include reference="6606"/>
                             </mask>
                         </variation>
                         <constraints>
@@ -1078,9 +1076,8 @@
                             <constraint id="1566" firstItem="688" firstAttribute="top" secondItem="860" secondAttribute="centerY" constant="303"/>
                             <constraint id="6435" firstItem="657" firstAttribute="trailing" secondItem="1659" secondAttribute="trailing"/>
                             <constraint id="6436" firstItem="657" firstAttribute="bottom" secondItem="1659" secondAttribute="bottom" constant="101"/>
-                            <constraint id="6451" firstItem="657" firstAttribute="trailing" secondItem="6448" secondAttribute="trailing"/>
-                            <constraint id="6452" firstItem="657" firstAttribute="bottom" secondItem="6448" secondAttribute="bottom" constant="53"/>
-                            <constraint id="6455" firstItem="6448" firstAttribute="centerX" secondItem="657" secondAttribute="centerX"/>
+                            <constraint id="6605" firstItem="657" firstAttribute="trailing" secondItem="6448" secondAttribute="trailing"/>
+                            <constraint id="6606" firstItem="657" firstAttribute="bottom" secondItem="6448" secondAttribute="bottom" constant="50"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Options" id="779" image="settings.png"/>

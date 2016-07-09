@@ -56,17 +56,31 @@ namespace Productivity_Tracker_iOS
 
         public override void DidEnterBackground(UIApplication application)
         {
+
             //remove old notifications
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
             UIApplication.SharedApplication.CancelAllLocalNotifications();
 
             //create/schedule notification
             UILocalNotification notification = new UILocalNotification();
-            DateTime hourHalfFromNow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 30, 0);
-            if (DateTime.Now.Hour + 1 < 24)
+            DateTime hourHalfFromNow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 10, 30, 0);
+
+            if (DateTime.Now.Hour + 1 <= hourMax)
             {
-                hourHalfFromNow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour + 1, 30, 0);
+                if (DateTime.Now.Hour + 1 == hourMax)
+                {
+                    hourHalfFromNow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour + 1, minuteMax, 0);
+                }
+                else
+                {
+                    hourHalfFromNow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour + 1, 30, 0);
+                }
             }
+            else if (DateTime.Now.Hour + 1 > hourMax)
+            {
+                hourHalfFromNow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day + 1, hourMin, minuteMin, 0);
+            }
+
             notification.FireDate = NSDate.FromTimeIntervalSinceNow(hourHalfFromNow.Subtract(DateTime.Now).TotalSeconds);
 
             //notification.AlertTitle = "Productivity Tracker"; // required for Apple Watch notifications
@@ -78,9 +92,9 @@ namespace Productivity_Tracker_iOS
 
         public override void WillEnterForeground(UIApplication application)
         {
-            
+
         }
-        
+
         public override void OnActivated(UIApplication application)
         {
         }
