@@ -4,6 +4,7 @@ using SQLite;
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Productivity_Tracker_iOS
 {
@@ -79,14 +80,9 @@ namespace Productivity_Tracker_iOS
         {
             
         }
-
+        
         public override void OnActivated(UIApplication application)
         {
-        }
-
-        public override void WillTerminate(UIApplication application)
-        {
-            // Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
         }
     }
 }

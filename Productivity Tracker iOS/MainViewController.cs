@@ -5,12 +5,12 @@ using System.Collections.Generic;
 using System.CodeDom.Compiler;
 using UIKit;
 using SQLite;
+using CoreGraphics;
 
 namespace Productivity_Tracker_iOS
 {
     partial class MainViewController : UIViewController
     {
-
         public MainViewController(IntPtr handle) : base(handle)
         {
         }
@@ -18,6 +18,9 @@ namespace Productivity_Tracker_iOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+            //see if application was opened from background and run button refresh if true
+            NSObject notificationObserver = NSNotificationCenter.DefaultCenter.AddObserver(UIApplication.DidBecomeActiveNotification, UpdateView);
 
             b_Awesome.TouchUpInside += AwesomeClicked;
             b_Good.TouchUpInside += GoodClicked;
@@ -31,6 +34,20 @@ namespace Productivity_Tracker_iOS
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
+            EnableButtons();
+
+            var database = AppDelegate.db.Table<ProductiveData>();
+            foreach (var dataPoint in database)
+            {
+                if (dataPoint.DateHour == DateTime.Now.Hour && dataPoint.DateDay == DateTime.Now.Day && dataPoint.DateMonth == DateTime.Now.Month)
+                {
+                    DisbleButtons();
+                }
+            }
+        }
+
+        private void UpdateView(NSNotification a_notification)
+        {
             EnableButtons();
 
             var database = AppDelegate.db.Table<ProductiveData>();
@@ -78,7 +95,7 @@ namespace Productivity_Tracker_iOS
             DisbleButtons();
         }
 
-        void EnableButtons()
+        public void EnableButtons()
         {
             b_Awesome.Enabled = true;
             b_Good.Enabled = true;
