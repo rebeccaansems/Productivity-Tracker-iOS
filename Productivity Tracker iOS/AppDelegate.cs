@@ -25,7 +25,7 @@ namespace Productivity_Tracker_iOS
         public static SQLiteConnection db;
 
         public static int hourMin = 8, hourMax = 12 + 10;
-        public static int minuteMin, minuteMax;
+        public static int minuteMin = 0, minuteMax = 0;
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
@@ -43,15 +43,26 @@ namespace Productivity_Tracker_iOS
             db = new SQLiteConnection(dbPath);
             db.CreateTable<ProductiveData>();
 
-            return true;
-        }
+            db.CreateTable<MinMaxTimes>();
+            if (db.Table<MinMaxTimes>().Count() == 0)
+            {
+                MinMaxTimes times = new MinMaxTimes();
+                times.MinHour = hourMin;
+                times.MaxHour = hourMax;
+                times.MinMinute = minuteMin;
+                times.MaxMinute = minuteMax;
+                db.Insert(times);
+            }
+            else
+            {
+                MinMaxTimes times = db.Table<MinMaxTimes>().First();
+                hourMin = times.MinHour;
+                hourMax = times.MaxHour;
+                minuteMin = times.MinMinute;
+                minuteMax = times.MaxMinute;
+            }
 
-        public override void OnResignActivation(UIApplication application)
-        {
-            // Invoked when the application is about to move from active to inactive state.
-            // This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) 
-            // or when the user quits the application and it begins the transition to the background state.
-            // Games should use this method to pause the game.
+            return true;
         }
 
         public override void DidEnterBackground(UIApplication application)
@@ -88,15 +99,15 @@ namespace Productivity_Tracker_iOS
             notification.AlertBody = "How productive are you feeling?";
             notification.ApplicationIconBadgeNumber = 1;
             UIApplication.SharedApplication.ScheduleLocalNotification(notification);
-        }
 
-        public override void WillEnterForeground(UIApplication application)
-        {
-
-        }
-
-        public override void OnActivated(UIApplication application)
-        {
+            //Save min/max times in database
+            MinMaxTimes times = new MinMaxTimes();
+            times.MinHour = hourMin;
+            times.MaxHour = hourMax;
+            times.MinMinute = minuteMin;
+            times.MaxMinute = minuteMax;
+            db.DeleteAll<MinMaxTimes>();
+            db.Insert(times);
         }
     }
 }

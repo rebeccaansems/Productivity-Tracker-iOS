@@ -98,6 +98,7 @@
     <Compile Include="MainViewController.designer.cs">
       <DependentUpon>MainViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="MinMaxTimes.cs" />
     <Compile Include="OptionsViewController.cs" />
     <Compile Include="OptionsViewController.designer.cs">
       <DependentUpon>OptionsViewController.cs</DependentUpon>
