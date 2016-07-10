@@ -16,11 +16,11 @@ namespace Productivity_Tracker_iOS
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UITextView t_LeastTime { get; set; }
+		UILabel t_LeastTimes { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UITextView t_MostTimes { get; set; }
+		UILabel t_MostTimes { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -32,9 +32,9 @@ namespace Productivity_Tracker_iOS
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (t_LeastTime != null) {
-				t_LeastTime.Dispose ();
-				t_LeastTime = null;
+			if (t_LeastTimes != null) {
+				t_LeastTimes.Dispose ();
+				t_LeastTimes = null;
 			}
 			if (t_MostTimes != null) {
 				t_MostTimes.Dispose ();

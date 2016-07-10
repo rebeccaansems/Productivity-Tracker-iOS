@@ -18,9 +18,7 @@ namespace Productivity_Tracker_iOS
         public override void ViewDidAppear(Boolean animated)
         {
             base.ViewDidLoad();
-
-            t_LeastTime.Editable = false;
-            t_MostTimes.Editable = false;
+            
             t_SummaryLeast.Editable = false;
             t_SummaryMost.Editable = false;
 

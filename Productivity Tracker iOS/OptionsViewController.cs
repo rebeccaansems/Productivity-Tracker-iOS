@@ -23,13 +23,6 @@ namespace Productivity_Tracker_iOS
             b_RemoveLastDataPoint.TouchUpInside += RemoveLastPointClicked;
             b_Clear.TouchUpInside += ClearClicked;
 
-            t_Clear.Editable = false;
-            t_DataTitle.Editable = false;
-            t_NotificationTitle.Editable = false;
-            t_RemoveDataPoint.Editable = false;
-            t_TimeMax.Editable = false;
-            t_TimeMin.Editable = false;
-
             v_TimePicker.Hidden = true;
             b_Save.Hidden = true;
 
@@ -37,10 +30,8 @@ namespace Productivity_Tracker_iOS
             b_RemoveLastDataPoint.Hidden = false;
             t_Clear.Hidden = false;
             t_RemoveDataPoint.Hidden = false;
-            t_DataTitle.Text = "Data";
-            t_TimeMin.Text = ConvertTime("Notification Start Time: ", AppDelegate.hourMin, AppDelegate.minuteMin);
-            t_TimeMax.Text = ConvertTime("Notification End Time: ", AppDelegate.hourMax, AppDelegate.minuteMax);
-
+            t_TimeMin.Text = ConvertTime("Start Time: ", AppDelegate.hourMin, AppDelegate.minuteMin);
+            t_TimeMax.Text = ConvertTime("End Time: ", AppDelegate.hourMax, AppDelegate.minuteMax);
         }
 
         public override void ViewDidAppear(bool animated)
@@ -99,8 +90,8 @@ namespace Productivity_Tracker_iOS
                 t_Clear.Hidden = false;
                 t_RemoveDataPoint.Hidden = false;
                 t_DataTitle.Text = "Data";
-                t_TimeMin.Text = ConvertTime("Notification Start Time: ", AppDelegate.hourMin, AppDelegate.minuteMin);
-                t_TimeMax.Text = ConvertTime("Notification End Time: ", AppDelegate.hourMax, AppDelegate.minuteMax);
+                t_TimeMin.Text = ConvertTime("Start Time: ", AppDelegate.hourMin, AppDelegate.minuteMin);
+                t_TimeMax.Text = ConvertTime("End Time: ", AppDelegate.hourMax, AppDelegate.minuteMax);
             }
             else
             {

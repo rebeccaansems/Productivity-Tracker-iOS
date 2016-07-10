@@ -36,7 +36,7 @@ namespace Productivity_Tracker_iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UITextView t_TitleRate { get; set; }
+		UILabel t_TitleRate { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{

@@ -40,11 +40,11 @@ namespace Productivity_Tracker_iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UITextView t_DataTitle { get; set; }
+		UILabel t_DataTitle { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UITextView t_NotificationTitle { get; set; }
+		UILabel t_NotificationTitle { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -52,11 +52,11 @@ namespace Productivity_Tracker_iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UITextView t_TimeMax { get; set; }
+		UILabel t_TimeMax { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UITextView t_TimeMin { get; set; }
+		UILabel t_TimeMin { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]

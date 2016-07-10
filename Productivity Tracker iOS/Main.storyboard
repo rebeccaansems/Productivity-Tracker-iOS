@@ -40,7 +40,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="844" translatesAutoresizingMaskIntoConstraints="NO" text=" ">
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" id="844" translatesAutoresizingMaskIntoConstraints="NO" text=" " selectable="NO" editable="NO" userInteractionEnabled="NO">
                                 <rect key="frame" x="5" y="-3" width="160" height="240"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -60,33 +60,6 @@
                                     <mask key="constraints">
                                         <exclude reference="865"/>
                                         <exclude reference="866"/>
-                                    </mask>
-                                </variation>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="473" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center" text="Most Productive Times">
-                                <rect key="frame" x="90" y="-128" width="160" height="240"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="0.0" y="20" width="320" height="45"/>
-                                    <mask key="constraints">
-                                        <include reference="1051"/>
-                                        <include reference="1052"/>
-                                    </mask>
-                                </variation>
-                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
-                                <constraints>
-                                    <constraint id="1051" firstAttribute="width" constant="320"/>
-                                    <constraint id="1052" firstAttribute="height" constant="45"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1051"/>
-                                        <exclude reference="1052"/>
                                     </mask>
                                 </variation>
                                 <accessibility key="accessibilityConfiguration">
@@ -121,33 +94,6 @@
                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                 </accessibility>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="497" translatesAutoresizingMaskIntoConstraints="NO" text="Least Productive Times" textAlignment="center">
-                                <rect key="frame" x="90" y="-128" width="160" height="240"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="0.0" y="260" width="320" height="45"/>
-                                    <mask key="constraints">
-                                        <include reference="520"/>
-                                        <include reference="521"/>
-                                    </mask>
-                                </variation>
-                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
-                                <constraints>
-                                    <constraint id="520" firstAttribute="width" constant="320"/>
-                                    <constraint id="521" firstAttribute="height" constant="45"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="520"/>
-                                        <exclude reference="521"/>
-                                    </mask>
-                                </variation>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="505" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="35" y="88" width="160" height="240"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
@@ -176,75 +122,123 @@
                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                 </accessibility>
                             </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Most Productive Times" lineBreakMode="tailTruncation" minimumFontSize="10" id="6671" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="106" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16862745098039217" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="20" width="320" height="45"/>
+                                    <mask key="constraints">
+                                        <include reference="6672"/>
+                                        <include reference="6673"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="6672" firstAttribute="width" constant="320"/>
+                                    <constraint id="6673" firstAttribute="height" constant="45"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6672"/>
+                                        <exclude reference="6673"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Least Productive Times" lineBreakMode="tailTruncation" minimumFontSize="10" id="6677" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="106" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16862745098039217" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="260" width="320" height="45"/>
+                                    <mask key="constraints">
+                                        <include reference="6678"/>
+                                        <include reference="6679"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="6678" firstAttribute="width" constant="320"/>
+                                    <constraint id="6679" firstAttribute="height" constant="45"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6678"/>
+                                        <exclude reference="6679"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="473"/>
                                 <exclude reference="485"/>
-                                <exclude reference="497"/>
                                 <exclude reference="505"/>
                                 <exclude reference="844"/>
+                                <exclude reference="6671"/>
+                                <exclude reference="6677"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="518"/>
-                                <exclude reference="519"/>
-                                <exclude reference="522"/>
                                 <exclude reference="863"/>
                                 <exclude reference="864"/>
                                 <exclude reference="867"/>
-                                <exclude reference="1049"/>
-                                <exclude reference="1050"/>
-                                <exclude reference="1053"/>
                                 <exclude reference="1600"/>
                                 <exclude reference="1601"/>
                                 <exclude reference="1604"/>
                                 <exclude reference="1605"/>
                                 <exclude reference="1609"/>
                                 <exclude reference="1610"/>
+                                <exclude reference="6674"/>
+                                <exclude reference="6675"/>
+                                <exclude reference="6676"/>
+                                <exclude reference="6680"/>
+                                <exclude reference="6681"/>
+                                <exclude reference="6682"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="473"/>
                                 <include reference="485"/>
-                                <include reference="497"/>
                                 <include reference="505"/>
                                 <include reference="844"/>
+                                <include reference="6671"/>
+                                <include reference="6677"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="518"/>
-                                <include reference="519"/>
-                                <include reference="522"/>
                                 <include reference="863"/>
                                 <include reference="864"/>
                                 <include reference="867"/>
-                                <include reference="1049"/>
-                                <include reference="1050"/>
-                                <include reference="1053"/>
                                 <include reference="1600"/>
                                 <include reference="1601"/>
                                 <include reference="1604"/>
                                 <include reference="1605"/>
                                 <include reference="1609"/>
                                 <include reference="1610"/>
+                                <include reference="6674"/>
+                                <include reference="6675"/>
+                                <include reference="6676"/>
+                                <include reference="6680"/>
+                                <include reference="6681"/>
+                                <include reference="6682"/>
                             </mask>
                         </variation>
                         <constraints>
-                            <constraint id="518" firstItem="198" firstAttribute="trailing" secondItem="497" secondAttribute="trailing"/>
-                            <constraint id="519" firstItem="497" firstAttribute="top" secondItem="198" secondAttribute="top" constant="260"/>
-                            <constraint id="522" firstItem="497" firstAttribute="centerX" secondItem="198" secondAttribute="centerX"/>
                             <constraint id="863" firstItem="198" firstAttribute="trailing" secondItem="844" secondAttribute="trailing"/>
                             <constraint id="864" firstItem="844" firstAttribute="top" secondItem="198" secondAttribute="top" constant="-20"/>
                             <constraint id="867" firstItem="844" firstAttribute="centerX" secondItem="198" secondAttribute="centerX"/>
-                            <constraint id="1049" firstItem="198" firstAttribute="trailing" secondItem="473" secondAttribute="trailing"/>
-                            <constraint id="1050" firstItem="473" firstAttribute="top" secondItem="198" secondAttribute="top" constant="20"/>
-                            <constraint id="1053" firstItem="473" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
                             <constraint id="1600" firstItem="198" firstAttribute="trailing" secondItem="485" secondAttribute="trailing" constant="20"/>
                             <constraint id="1601" firstItem="485" firstAttribute="top" secondItem="198" secondAttribute="top" constant="70"/>
                             <constraint id="1604" firstItem="485" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
                             <constraint id="1605" firstItem="198" firstAttribute="trailing" secondItem="505" secondAttribute="trailing" constant="20"/>
                             <constraint id="1609" firstItem="505" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
                             <constraint id="1610" firstItem="505" firstAttribute="top" secondItem="844" secondAttribute="centerY" constant="303"/>
+                            <constraint id="6674" firstItem="198" firstAttribute="trailing" secondItem="6671" secondAttribute="trailing"/>
+                            <constraint id="6675" firstItem="6671" firstAttribute="top" secondItem="198" secondAttribute="top" constant="20"/>
+                            <constraint id="6676" firstItem="6671" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
+                            <constraint id="6680" firstItem="198" firstAttribute="trailing" secondItem="6677" secondAttribute="trailing"/>
+                            <constraint id="6681" firstItem="6677" firstAttribute="top" secondItem="198" secondAttribute="top" constant="260"/>
+                            <constraint id="6682" firstItem="6677" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
                         </constraints>
                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
                     </view>
@@ -253,8 +247,8 @@
                     <connections>
                         <outlet property="t_SummaryMost" destination="485" id="name-outlet-485"/>
                         <outlet property="t_SummaryLeast" destination="505" id="name-outlet-505"/>
-                        <outlet property="t_LeastTime" destination="497" id="name-outlet-497"/>
-                        <outlet property="t_MostTimes" destination="473" id="name-outlet-473"/>
+                        <outlet property="t_MostTimes" destination="6671" id="name-outlet-6671"/>
+                        <outlet property="t_LeastTimes" destination="6677" id="name-outlet-6677"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="199" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -273,7 +267,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="868" translatesAutoresizingMaskIntoConstraints="NO" text=" ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="868" translatesAutoresizingMaskIntoConstraints="NO" text=" " selectable="NO" editable="NO">
                                 <rect key="frame" x="5" y="-3" width="160" height="240"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -429,33 +423,30 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="434" translatesAutoresizingMaskIntoConstraints="NO" text="Rate Productivity" textAlignment="center">
-                                <rect key="frame" x="90" y="-128" width="160" height="240"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rate Productivity" lineBreakMode="tailTruncation" minimumFontSize="10" id="6663" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="106" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16862745098039217" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <rect key="frame" x="0.0" y="20" width="320" height="45"/>
                                     <mask key="constraints">
-                                        <include reference="6530"/>
-                                        <include reference="6531"/>
+                                        <include reference="6668"/>
+                                        <include reference="6669"/>
                                     </mask>
                                 </variation>
-                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
-                                </accessibility>
                                 <constraints>
-                                    <constraint id="6530" firstAttribute="width" constant="320"/>
-                                    <constraint id="6531" firstAttribute="height" constant="45"/>
+                                    <constraint id="6668" firstAttribute="width" constant="320"/>
+                                    <constraint id="6669" firstAttribute="height" constant="45"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="6530"/>
-                                        <exclude reference="6531"/>
+                                        <exclude reference="6668"/>
+                                        <exclude reference="6669"/>
                                     </mask>
                                 </variation>
-                            </textView>
+                            </label>
                         </subviews>
                         <variation key="default">
                             <mask key="subviews">
@@ -464,8 +455,8 @@
                                 <exclude reference="395"/>
                                 <exclude reference="396"/>
                                 <exclude reference="397"/>
-                                <exclude reference="434"/>
                                 <exclude reference="868"/>
+                                <exclude reference="6663"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="1079"/>
@@ -486,9 +477,9 @@
                                 <exclude reference="6522"/>
                                 <exclude reference="6526"/>
                                 <exclude reference="6527"/>
-                                <exclude reference="6528"/>
-                                <exclude reference="6529"/>
-                                <exclude reference="6532"/>
+                                <exclude reference="6666"/>
+                                <exclude reference="6667"/>
+                                <exclude reference="6670"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -498,8 +489,8 @@
                                 <include reference="395"/>
                                 <include reference="396"/>
                                 <include reference="397"/>
-                                <include reference="434"/>
                                 <include reference="868"/>
+                                <include reference="6663"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="1079"/>
@@ -520,9 +511,9 @@
                                 <include reference="6522"/>
                                 <include reference="6526"/>
                                 <include reference="6527"/>
-                                <include reference="6528"/>
-                                <include reference="6529"/>
-                                <include reference="6532"/>
+                                <include reference="6666"/>
+                                <include reference="6667"/>
+                                <include reference="6670"/>
                             </mask>
                         </variation>
                         <constraints>
@@ -544,9 +535,9 @@
                             <constraint id="6522" firstItem="205" firstAttribute="trailing" secondItem="397" secondAttribute="trailing"/>
                             <constraint id="6526" firstItem="397" firstAttribute="centerX" secondItem="205" secondAttribute="centerX"/>
                             <constraint id="6527" firstItem="397" firstAttribute="top" secondItem="205" secondAttribute="top" constant="400"/>
-                            <constraint id="6528" firstItem="205" firstAttribute="trailing" secondItem="434" secondAttribute="trailing"/>
-                            <constraint id="6529" firstItem="434" firstAttribute="top" secondItem="205" secondAttribute="top" constant="20"/>
-                            <constraint id="6532" firstItem="434" firstAttribute="centerX" secondItem="868" secondAttribute="centerX"/>
+                            <constraint id="6666" firstItem="205" firstAttribute="trailing" secondItem="6663" secondAttribute="trailing"/>
+                            <constraint id="6667" firstItem="6663" firstAttribute="top" secondItem="205" secondAttribute="top" constant="20"/>
+                            <constraint id="6670" firstItem="6663" firstAttribute="centerX" secondItem="868" secondAttribute="centerX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" id="321" selectedImage="house-outline.png" image="house-outline.png"/>
@@ -557,7 +548,7 @@
                         <outlet property="b_Mediocre" destination="395" id="name-outlet-395"/>
                         <outlet property="b_Poor" destination="396" id="name-outlet-396"/>
                         <outlet property="b_Terrible" destination="397" id="name-outlet-397"/>
-                        <outlet property="t_TitleRate" destination="434" id="name-outlet-434"/>
+                        <outlet property="t_TitleRate" destination="6663" id="name-outlet-6663"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="206" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -576,7 +567,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="860" translatesAutoresizingMaskIntoConstraints="NO" text=" ">
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" id="860" translatesAutoresizingMaskIntoConstraints="NO" text=" " userInteractionEnabled="NO" selectable="NO" editable="NO">
                                 <rect key="frame" x="5" y="-3" width="160" height="240"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -596,60 +587,6 @@
                                     <mask key="constraints">
                                         <exclude reference="1069"/>
                                         <exclude reference="1070"/>
-                                    </mask>
-                                </variation>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="660" translatesAutoresizingMaskIntoConstraints="NO" text="Notification Times" textAlignment="center">
-                                <rect key="frame" x="90" y="-128" width="160" height="240"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="0.0" y="20" width="320" height="45"/>
-                                    <mask key="constraints">
-                                        <include reference="1074"/>
-                                        <include reference="1075"/>
-                                    </mask>
-                                </variation>
-                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
-                                <constraints>
-                                    <constraint id="1074" firstAttribute="width" constant="320"/>
-                                    <constraint id="1075" firstAttribute="height" constant="45"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1074"/>
-                                        <exclude reference="1075"/>
-                                    </mask>
-                                </variation>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="666" translatesAutoresizingMaskIntoConstraints="NO" text="Notification start time: 12:00pm">
-                                <rect key="frame" x="35" y="88" width="160" height="240"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="15" y="80" width="280" height="35"/>
-                                    <mask key="constraints">
-                                        <include reference="1519"/>
-                                        <include reference="1520"/>
-                                    </mask>
-                                </variation>
-                                <color key="textColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <constraints>
-                                    <constraint id="1519" firstAttribute="width" constant="280"/>
-                                    <constraint id="1520" firstAttribute="height" constant="35"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1519"/>
-                                        <exclude reference="1520"/>
                                     </mask>
                                 </variation>
                                 <accessibility key="accessibilityConfiguration">
@@ -683,33 +620,6 @@
                                 </variation>
                                 <connections/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="677" translatesAutoresizingMaskIntoConstraints="NO" text="Notification end time: 12:00pm">
-                                <rect key="frame" x="35" y="88" width="160" height="240"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="15" y="130" width="280" height="35"/>
-                                    <mask key="constraints">
-                                        <include reference="1529"/>
-                                        <include reference="1530"/>
-                                    </mask>
-                                </variation>
-                                <color key="textColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <constraints>
-                                    <constraint id="1529" firstAttribute="width" constant="280"/>
-                                    <constraint id="1530" firstAttribute="height" constant="35"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1529"/>
-                                        <exclude reference="1530"/>
-                                    </mask>
-                                </variation>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="678" translatesAutoresizingMaskIntoConstraints="NO" customClass="UIButton">
                                 <rect key="frame" x="137" y="127" width="46" height="30"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
@@ -737,34 +647,7 @@
                                 </variation>
                                 <connections/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="679" translatesAutoresizingMaskIntoConstraints="NO" text="Data" textAlignment="center">
-                                <rect key="frame" x="90" y="-128" width="160" height="240"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="0.0" y="200" width="320" height="45"/>
-                                    <mask key="constraints">
-                                        <include reference="1100"/>
-                                        <include reference="1101"/>
-                                    </mask>
-                                </variation>
-                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
-                                <constraints>
-                                    <constraint id="1100" firstAttribute="width" constant="320"/>
-                                    <constraint id="1101" firstAttribute="height" constant="45"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1100"/>
-                                        <exclude reference="1101"/>
-                                    </mask>
-                                </variation>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="682" translatesAutoresizingMaskIntoConstraints="NO" text="Remove last data point">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="682" translatesAutoresizingMaskIntoConstraints="NO" text="Remove last data point" selectable="NO" editable="NO">
                                 <rect key="frame" x="35" y="88" width="160" height="240"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -776,7 +659,7 @@
                                     </mask>
                                 </variation>
                                 <color key="textColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                 <constraints>
                                     <constraint id="1556" firstAttribute="width" constant="280"/>
                                     <constraint id="1557" firstAttribute="height" constant="35"/>
@@ -814,7 +697,7 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="688" translatesAutoresizingMaskIntoConstraints="NO" text="Clear all data ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="688" translatesAutoresizingMaskIntoConstraints="NO" text="Clear all data " editable="NO" selectable="NO">
                                 <rect key="frame" x="35" y="88" width="160" height="240"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -826,7 +709,7 @@
                                     </mask>
                                 </variation>
                                 <color key="textColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                 <constraints>
                                     <constraint id="1562" firstAttribute="width" constant="280"/>
                                     <constraint id="1563" firstAttribute="height" constant="35"/>
@@ -915,15 +798,105 @@
                                     </mask>
                                 </variation>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Notification Times" lineBreakMode="tailTruncation" minimumFontSize="10" id="6645" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="106" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16862745098039217" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="20" width="320" height="45"/>
+                                    <mask key="constraints">
+                                        <include reference="6648"/>
+                                        <include reference="6649"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="6648" firstAttribute="width" constant="320"/>
+                                    <constraint id="6649" firstAttribute="height" constant="45"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6648"/>
+                                        <exclude reference="6649"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Data" lineBreakMode="tailTruncation" minimumFontSize="10" id="6651" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="106" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16862745098039217" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="200" width="320" height="45"/>
+                                    <mask key="constraints">
+                                        <include reference="6656"/>
+                                        <include reference="6657"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="6656" firstAttribute="width" constant="320"/>
+                                    <constraint id="6657" firstAttribute="height" constant="45"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6656"/>
+                                        <exclude reference="6657"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Start time: 12:00pm" lineBreakMode="tailTruncation" minimumFontSize="10" id="6683" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="73" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="15" y="81" width="280" height="35"/>
+                                    <mask key="constraints">
+                                        <include reference="6686"/>
+                                        <include reference="6687"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="6686" firstAttribute="width" constant="280"/>
+                                    <constraint id="6687" firstAttribute="height" constant="35"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6686"/>
+                                        <exclude reference="6687"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="End time: 12:00pm" lineBreakMode="tailTruncation" minimumFontSize="10" id="6689" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="73" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="15" y="131" width="280" height="35"/>
+                                    <mask key="constraints">
+                                        <include reference="6694"/>
+                                        <include reference="6695"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="6694" firstAttribute="width" constant="280"/>
+                                    <constraint id="6695" firstAttribute="height" constant="35"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6694"/>
+                                        <exclude reference="6695"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="660"/>
-                                <exclude reference="666"/>
                                 <exclude reference="669"/>
-                                <exclude reference="677"/>
                                 <exclude reference="678"/>
-                                <exclude reference="679"/>
                                 <exclude reference="682"/>
                                 <exclude reference="685"/>
                                 <exclude reference="688"/>
@@ -931,25 +904,15 @@
                                 <exclude reference="860"/>
                                 <exclude reference="1659"/>
                                 <exclude reference="6448"/>
+                                <exclude reference="6645"/>
+                                <exclude reference="6651"/>
+                                <exclude reference="6683"/>
+                                <exclude reference="6689"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="1067"/>
                                 <exclude reference="1068"/>
                                 <exclude reference="1071"/>
-                                <exclude reference="1072"/>
-                                <exclude reference="1073"/>
-                                <exclude reference="1076"/>
-                                <exclude reference="1098"/>
-                                <exclude reference="1099"/>
-                                <exclude reference="1102"/>
-                                <exclude reference="1517"/>
-                                <exclude reference="1518"/>
-                                <exclude reference="1521"/>
-                                <exclude reference="1522"/>
-                                <exclude reference="1527"/>
-                                <exclude reference="1528"/>
-                                <exclude reference="1531"/>
-                                <exclude reference="1532"/>
                                 <exclude reference="1533"/>
                                 <exclude reference="1534"/>
                                 <exclude reference="1537"/>
@@ -974,16 +937,24 @@
                                 <exclude reference="6436"/>
                                 <exclude reference="6605"/>
                                 <exclude reference="6606"/>
+                                <exclude reference="6646"/>
+                                <exclude reference="6647"/>
+                                <exclude reference="6650"/>
+                                <exclude reference="6654"/>
+                                <exclude reference="6655"/>
+                                <exclude reference="6658"/>
+                                <exclude reference="6684"/>
+                                <exclude reference="6685"/>
+                                <exclude reference="6688"/>
+                                <exclude reference="6692"/>
+                                <exclude reference="6693"/>
+                                <exclude reference="6696"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="660"/>
-                                <include reference="666"/>
                                 <include reference="669"/>
-                                <include reference="677"/>
                                 <include reference="678"/>
-                                <include reference="679"/>
                                 <include reference="682"/>
                                 <include reference="685"/>
                                 <include reference="688"/>
@@ -991,25 +962,15 @@
                                 <include reference="860"/>
                                 <include reference="1659"/>
                                 <include reference="6448"/>
+                                <include reference="6645"/>
+                                <include reference="6651"/>
+                                <include reference="6683"/>
+                                <include reference="6689"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="1067"/>
                                 <include reference="1068"/>
                                 <include reference="1071"/>
-                                <include reference="1072"/>
-                                <include reference="1073"/>
-                                <include reference="1076"/>
-                                <include reference="1098"/>
-                                <include reference="1099"/>
-                                <include reference="1102"/>
-                                <include reference="1517"/>
-                                <include reference="1518"/>
-                                <include reference="1521"/>
-                                <include reference="1522"/>
-                                <include reference="1527"/>
-                                <include reference="1528"/>
-                                <include reference="1531"/>
-                                <include reference="1532"/>
                                 <include reference="1533"/>
                                 <include reference="1534"/>
                                 <include reference="1537"/>
@@ -1034,26 +995,24 @@
                                 <include reference="6436"/>
                                 <include reference="6605"/>
                                 <include reference="6606"/>
+                                <include reference="6646"/>
+                                <include reference="6647"/>
+                                <include reference="6650"/>
+                                <include reference="6654"/>
+                                <include reference="6655"/>
+                                <include reference="6658"/>
+                                <include reference="6684"/>
+                                <include reference="6685"/>
+                                <include reference="6688"/>
+                                <include reference="6692"/>
+                                <include reference="6693"/>
+                                <include reference="6696"/>
                             </mask>
                         </variation>
                         <constraints>
                             <constraint id="1067" firstItem="657" firstAttribute="trailing" secondItem="860" secondAttribute="trailing"/>
                             <constraint id="1068" firstItem="860" firstAttribute="top" secondItem="657" secondAttribute="top" constant="-20"/>
                             <constraint id="1071" firstItem="860" firstAttribute="centerX" secondItem="657" secondAttribute="centerX"/>
-                            <constraint id="1072" firstItem="657" firstAttribute="trailing" secondItem="660" secondAttribute="trailing"/>
-                            <constraint id="1073" firstItem="660" firstAttribute="top" secondItem="657" secondAttribute="top" constant="20"/>
-                            <constraint id="1076" firstItem="660" firstAttribute="centerX" secondItem="860" secondAttribute="centerX"/>
-                            <constraint id="1098" firstItem="657" firstAttribute="trailing" secondItem="679" secondAttribute="trailing"/>
-                            <constraint id="1099" firstItem="679" firstAttribute="top" secondItem="657" secondAttribute="top" constant="200"/>
-                            <constraint id="1102" firstItem="679" firstAttribute="centerX" secondItem="860" secondAttribute="centerX"/>
-                            <constraint id="1517" firstItem="666" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
-                            <constraint id="1518" firstItem="666" firstAttribute="top" secondItem="657" secondAttribute="top" constant="80"/>
-                            <constraint id="1521" firstItem="666" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
-                            <constraint id="1522" firstItem="860" firstAttribute="centerX" secondItem="666" secondAttribute="centerX" constant="5"/>
-                            <constraint id="1527" firstItem="677" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
-                            <constraint id="1528" firstItem="677" firstAttribute="top" secondItem="657" secondAttribute="top" constant="130"/>
-                            <constraint id="1531" firstItem="677" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
-                            <constraint id="1532" firstItem="860" firstAttribute="centerX" secondItem="677" secondAttribute="centerX" constant="5"/>
                             <constraint id="1533" firstItem="657" firstAttribute="trailing" secondItem="669" secondAttribute="trailing" constant="15"/>
                             <constraint id="1534" firstItem="669" firstAttribute="top" secondItem="657" secondAttribute="top" constant="80"/>
                             <constraint id="1537" firstItem="669" firstAttribute="centerX" secondItem="860" secondAttribute="centerX" constant="110"/>
@@ -1078,6 +1037,18 @@
                             <constraint id="6436" firstItem="657" firstAttribute="bottom" secondItem="1659" secondAttribute="bottom" constant="101"/>
                             <constraint id="6605" firstItem="657" firstAttribute="trailing" secondItem="6448" secondAttribute="trailing"/>
                             <constraint id="6606" firstItem="657" firstAttribute="bottom" secondItem="6448" secondAttribute="bottom" constant="50"/>
+                            <constraint id="6646" firstItem="657" firstAttribute="trailing" secondItem="6645" secondAttribute="trailing"/>
+                            <constraint id="6647" firstItem="6645" firstAttribute="top" secondItem="657" secondAttribute="top" constant="20"/>
+                            <constraint id="6650" firstItem="6645" firstAttribute="centerX" secondItem="860" secondAttribute="centerX"/>
+                            <constraint id="6654" firstItem="657" firstAttribute="trailing" secondItem="6651" secondAttribute="trailing"/>
+                            <constraint id="6655" firstItem="6651" firstAttribute="top" secondItem="657" secondAttribute="top" constant="200"/>
+                            <constraint id="6658" firstItem="6651" firstAttribute="centerX" secondItem="860" secondAttribute="centerX"/>
+                            <constraint id="6684" firstItem="6683" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
+                            <constraint id="6685" firstItem="6683" firstAttribute="top" secondItem="657" secondAttribute="top" constant="81"/>
+                            <constraint id="6688" firstItem="860" firstAttribute="centerX" secondItem="6683" secondAttribute="centerX" constant="5"/>
+                            <constraint id="6692" firstItem="6689" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
+                            <constraint id="6693" firstItem="6689" firstAttribute="top" secondItem="657" secondAttribute="top" constant="131"/>
+                            <constraint id="6696" firstItem="860" firstAttribute="centerX" secondItem="6689" secondAttribute="centerX" constant="5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Options" id="779" image="settings.png"/>
@@ -1087,14 +1058,14 @@
                         <outlet property="b_TimeMax" destination="678" id="name-outlet-678"/>
                         <outlet property="b_RemoveLastDataPoint" destination="685" id="name-outlet-685"/>
                         <outlet property="b_Clear" destination="691" id="name-outlet-691"/>
-                        <outlet property="t_TimeMin" destination="666" id="name-outlet-666"/>
-                        <outlet property="t_TimeMax" destination="677" id="name-outlet-677"/>
                         <outlet property="v_TimePicker" destination="1659" id="name-outlet-1659"/>
                         <outlet property="t_RemoveDataPoint" destination="682" id="name-outlet-682"/>
                         <outlet property="t_Clear" destination="688" id="name-outlet-688"/>
-                        <outlet property="t_DataTitle" destination="679" id="name-outlet-679"/>
-                        <outlet property="t_NotificationTitle" destination="660" id="name-outlet-660"/>
                         <outlet property="b_Save" destination="6448" id="name-outlet-6448"/>
+                        <outlet property="t_NotificationTitle" destination="6645" id="name-outlet-6645"/>
+                        <outlet property="t_DataTitle" destination="6651" id="name-outlet-6651"/>
+                        <outlet property="t_TimeMin" destination="6683" id="name-outlet-6683"/>
+                        <outlet property="t_TimeMax" destination="6689" id="name-outlet-6689"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="658" userLabel="First Responder" sceneMemberID="firstResponder"/>
