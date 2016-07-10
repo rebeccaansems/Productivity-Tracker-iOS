@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="6">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="7" sceneMemberID="viewController" customClass="TabBarController" storyboardIdentifier="TabBarController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="12">
+                        <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue id="6864" destination="204" kind="relationship" relationship="viewControllers"/>
+                        <segue id="6915" destination="197" kind="relationship" relationship="viewControllers"/>
+                        <segue id="7052" destination="656" kind="relationship" relationship="viewControllers"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796" y="209"/>
+        </scene>
+        <scene sceneID="196">
+            <objects>
+                <viewController id="197" sceneMemberID="viewController" customClass="SummaryViewController" storyboardIdentifier="SummaryViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="194"/>
+                        <viewControllerLayoutGuide type="bottom" id="195"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="198">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" id="844" translatesAutoresizingMaskIntoConstraints="NO" text=" " selectable="NO" editable="NO" userInteractionEnabled="NO">
+                                <rect key="frame" x="5" y="-3" width="160" height="240"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="-20" width="320" height="54"/>
+                                    <mask key="constraints">
+                                        <include reference="865"/>
+                                        <include reference="866"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="865" firstAttribute="width" constant="320"/>
+                                    <constraint id="866" firstAttribute="height" constant="54"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="865"/>
+                                        <exclude reference="866"/>
+                                    </mask>
+                                </variation>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="485" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="35" y="88" width="160" height="240"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="20" y="70" width="280" height="140"/>
+                                    <mask key="constraints">
+                                        <include reference="1602"/>
+                                        <include reference="1603"/>
+                                    </mask>
+                                </variation>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <string key="text">10pm                                                                             11pm                                                                             12am</string>
+                                <constraints>
+                                    <constraint id="1602" firstAttribute="width" constant="280"/>
+                                    <constraint id="1603" firstAttribute="height" constant="170"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1602"/>
+                                        <exclude reference="1603"/>
+                                    </mask>
+                                </variation>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="505" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="35" y="88" width="160" height="240"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="20" y="270" width="280" height="140"/>
+                                    <mask key="constraints">
+                                        <include reference="7093"/>
+                                        <include reference="7094"/>
+                                    </mask>
+                                </variation>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <string key="text">10pm                                                                             11pm                                                                             12am</string>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint id="7093" firstAttribute="width" constant="280"/>
+                                    <constraint id="7094" firstAttribute="height" constant="140"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7093"/>
+                                        <exclude reference="7094"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Most Productive Times" lineBreakMode="tailTruncation" minimumFontSize="10" id="6671" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="106" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16862745098039217" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="20" width="320" height="45"/>
+                                    <mask key="constraints">
+                                        <include reference="6672"/>
+                                        <include reference="6673"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="6672" firstAttribute="width" constant="320"/>
+                                    <constraint id="6673" firstAttribute="height" constant="45"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6672"/>
+                                        <exclude reference="6673"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Least Productive Times" lineBreakMode="tailTruncation" minimumFontSize="10" id="6677" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="106" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16862745098039217" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="220" width="320" height="45"/>
+                                    <mask key="constraints">
+                                        <include reference="7087"/>
+                                        <include reference="7088"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="7087" firstAttribute="width" constant="320"/>
+                                    <constraint id="7088" firstAttribute="height" constant="45"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7087"/>
+                                        <exclude reference="7088"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="485"/>
+                                <exclude reference="505"/>
+                                <exclude reference="844"/>
+                                <exclude reference="6671"/>
+                                <exclude reference="6677"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="863"/>
+                                <exclude reference="864"/>
+                                <exclude reference="867"/>
+                                <exclude reference="1600"/>
+                                <exclude reference="1601"/>
+                                <exclude reference="1604"/>
+                                <exclude reference="6674"/>
+                                <exclude reference="6675"/>
+                                <exclude reference="6676"/>
+                                <exclude reference="7085"/>
+                                <exclude reference="7089"/>
+                                <exclude reference="7090"/>
+                                <exclude reference="7091"/>
+                                <exclude reference="7095"/>
+                                <exclude reference="7096"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="485"/>
+                                <include reference="505"/>
+                                <include reference="844"/>
+                                <include reference="6671"/>
+                                <include reference="6677"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="863"/>
+                                <include reference="864"/>
+                                <include reference="867"/>
+                                <include reference="1600"/>
+                                <include reference="1601"/>
+                                <include reference="1604"/>
+                                <include reference="6674"/>
+                                <include reference="6675"/>
+                                <include reference="6676"/>
+                                <include reference="7085"/>
+                                <include reference="7089"/>
+                                <include reference="7090"/>
+                                <include reference="7091"/>
+                                <include reference="7095"/>
+                                <include reference="7096"/>
+                            </mask>
+                        </variation>
+                        <constraints>
+                            <constraint id="863" firstItem="198" firstAttribute="trailing" secondItem="844" secondAttribute="trailing"/>
+                            <constraint id="864" firstItem="844" firstAttribute="top" secondItem="198" secondAttribute="top" constant="-20"/>
+                            <constraint id="867" firstItem="844" firstAttribute="centerX" secondItem="198" secondAttribute="centerX"/>
+                            <constraint id="1600" firstItem="198" firstAttribute="trailing" secondItem="485" secondAttribute="trailing" constant="20"/>
+                            <constraint id="1601" firstItem="485" firstAttribute="top" secondItem="198" secondAttribute="top" constant="70"/>
+                            <constraint id="1604" firstItem="485" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
+                            <constraint id="6674" firstItem="198" firstAttribute="trailing" secondItem="6671" secondAttribute="trailing"/>
+                            <constraint id="6675" firstItem="6671" firstAttribute="top" secondItem="198" secondAttribute="top" constant="20"/>
+                            <constraint id="6676" firstItem="6671" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
+                            <constraint id="7085" firstItem="198" firstAttribute="trailing" secondItem="6677" secondAttribute="trailing"/>
+                            <constraint id="7089" firstItem="6677" firstAttribute="top" secondItem="844" secondAttribute="centerY" constant="213"/>
+                            <constraint id="7090" firstItem="6677" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
+                            <constraint id="7091" firstItem="198" firstAttribute="trailing" secondItem="505" secondAttribute="trailing" constant="20"/>
+                            <constraint id="7095" firstItem="505" firstAttribute="top" secondItem="844" secondAttribute="centerY" constant="263"/>
+                            <constraint id="7096" firstItem="505" firstAttribute="centerX" secondItem="844" secondAttribute="centerX"/>
+                        </constraints>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Summary" id="261" selectedImage="menu-button.png" image="menu-button.png"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="t_SummaryMost" destination="485" id="name-outlet-485"/>
+                        <outlet property="t_SummaryLeast" destination="505" id="name-outlet-505"/>
+                        <outlet property="t_MostTimes" destination="6671" id="name-outlet-6671"/>
+                        <outlet property="t_LeastTimes" destination="6677" id="name-outlet-6677"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="199" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-295" y="-108"/>
+        </scene>
+        <scene sceneID="203">
+            <objects>
+                <viewController id="204" sceneMemberID="viewController" customClass="MainViewController" storyboardIdentifier="MainViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="201"/>
+                        <viewControllerLayoutGuide type="bottom" id="202"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="205">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="868" translatesAutoresizingMaskIntoConstraints="NO" text=" " selectable="NO" editable="NO">
+                                <rect key="frame" x="5" y="-3" width="160" height="240"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="-20" width="320" height="54"/>
+                                    <mask key="constraints">
+                                        <include reference="6500"/>
+                                        <include reference="6501"/>
+                                    </mask>
+                                </variation>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint id="6500" firstAttribute="width" constant="320"/>
+                                    <constraint id="6501" firstAttribute="height" constant="54"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6500"/>
+                                        <exclude reference="6501"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="393" translatesAutoresizingMaskIntoConstraints="NO" customClass="UIButton">
+                                <rect key="frame" x="137" y="127" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <state key="normal" title="AWESOME">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="85" width="320" height="48"/>
+                                    <mask key="constraints">
+                                        <include reference="7058"/>
+                                        <include reference="7059"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="7058" firstAttribute="width" constant="320"/>
+                                    <constraint id="7059" firstAttribute="height" constant="48"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7058"/>
+                                        <exclude reference="7059"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="394" translatesAutoresizingMaskIntoConstraints="NO" customClass="UIButton">
+                                <rect key="frame" x="137" y="127" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <state key="normal" title="GOOD">
+                                    <color key="titleShadowColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="150" width="320" height="48"/>
+                                    <mask key="constraints">
+                                        <include reference="7062"/>
+                                        <include reference="7063"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="7062" firstAttribute="width" constant="320"/>
+                                    <constraint id="7063" firstAttribute="height" constant="48"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7062"/>
+                                        <exclude reference="7063"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="395" translatesAutoresizingMaskIntoConstraints="NO" customClass="UIButton">
+                                <rect key="frame" x="137" y="127" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <state key="normal" title="MEDIOCRE">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="215" width="320" height="48"/>
+                                    <mask key="constraints">
+                                        <include reference="7066"/>
+                                        <include reference="7067"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="7066" firstAttribute="width" constant="320"/>
+                                    <constraint id="7067" firstAttribute="height" constant="48"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7066"/>
+                                        <exclude reference="7067"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="396" translatesAutoresizingMaskIntoConstraints="NO" customClass="UIButton">
+                                <rect key="frame" x="137" y="127" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <state key="normal" title="POOR">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="280" width="320" height="48"/>
+                                    <mask key="constraints">
+                                        <include reference="7070"/>
+                                        <include reference="7071"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="7070" firstAttribute="width" constant="320"/>
+                                    <constraint id="7071" firstAttribute="height" constant="48"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7070"/>
+                                        <exclude reference="7071"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="397" translatesAutoresizingMaskIntoConstraints="NO" customClass="UIButton">
+                                <rect key="frame" x="137" y="127" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <state key="normal" title="TERRIBLE">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="345" width="320" height="48"/>
+                                    <mask key="constraints">
+                                        <include reference="7075"/>
+                                        <include reference="7076"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="7075" firstAttribute="width" constant="320"/>
+                                    <constraint id="7076" firstAttribute="height" constant="48"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7075"/>
+                                        <exclude reference="7076"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rate Productivity" lineBreakMode="tailTruncation" minimumFontSize="10" id="6663" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="106" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16862745098039217" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="20" width="320" height="45"/>
+                                    <mask key="constraints">
+                                        <include reference="6668"/>
+                                        <include reference="6669"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="6668" firstAttribute="width" constant="320"/>
+                                    <constraint id="6669" firstAttribute="height" constant="45"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6668"/>
+                                        <exclude reference="6669"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="393"/>
+                                <exclude reference="394"/>
+                                <exclude reference="395"/>
+                                <exclude reference="396"/>
+                                <exclude reference="397"/>
+                                <exclude reference="868"/>
+                                <exclude reference="6663"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6498"/>
+                                <exclude reference="6499"/>
+                                <exclude reference="6502"/>
+                                <exclude reference="6666"/>
+                                <exclude reference="6667"/>
+                                <exclude reference="6670"/>
+                                <exclude reference="7056"/>
+                                <exclude reference="7057"/>
+                                <exclude reference="7060"/>
+                                <exclude reference="7061"/>
+                                <exclude reference="7064"/>
+                                <exclude reference="7065"/>
+                                <exclude reference="7068"/>
+                                <exclude reference="7072"/>
+                                <exclude reference="7073"/>
+                                <exclude reference="7077"/>
+                                <exclude reference="7078"/>
+                                <exclude reference="7079"/>
+                                <exclude reference="7080"/>
+                                <exclude reference="7081"/>
+                                <exclude reference="7082"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="393"/>
+                                <include reference="394"/>
+                                <include reference="395"/>
+                                <include reference="396"/>
+                                <include reference="397"/>
+                                <include reference="868"/>
+                                <include reference="6663"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6498"/>
+                                <include reference="6499"/>
+                                <include reference="6502"/>
+                                <include reference="6666"/>
+                                <include reference="6667"/>
+                                <include reference="6670"/>
+                                <include reference="7056"/>
+                                <include reference="7057"/>
+                                <include reference="7060"/>
+                                <include reference="7061"/>
+                                <include reference="7064"/>
+                                <include reference="7065"/>
+                                <include reference="7068"/>
+                                <include reference="7072"/>
+                                <include reference="7073"/>
+                                <include reference="7077"/>
+                                <include reference="7078"/>
+                                <include reference="7079"/>
+                                <include reference="7080"/>
+                                <include reference="7081"/>
+                                <include reference="7082"/>
+                            </mask>
+                        </variation>
+                        <constraints>
+                            <constraint id="6498" firstItem="205" firstAttribute="trailing" secondItem="868" secondAttribute="trailing"/>
+                            <constraint id="6499" firstItem="868" firstAttribute="top" secondItem="205" secondAttribute="top" constant="-20"/>
+                            <constraint id="6502" firstItem="868" firstAttribute="centerX" secondItem="205" secondAttribute="centerX"/>
+                            <constraint id="6666" firstItem="205" firstAttribute="trailing" secondItem="6663" secondAttribute="trailing"/>
+                            <constraint id="6667" firstItem="6663" firstAttribute="top" secondItem="205" secondAttribute="top" constant="20"/>
+                            <constraint id="6670" firstItem="6663" firstAttribute="centerX" secondItem="868" secondAttribute="centerX"/>
+                            <constraint id="7056" firstItem="205" firstAttribute="trailing" secondItem="393" secondAttribute="trailing"/>
+                            <constraint id="7057" firstItem="393" firstAttribute="top" secondItem="205" secondAttribute="top" constant="85"/>
+                            <constraint id="7060" firstItem="205" firstAttribute="trailing" secondItem="394" secondAttribute="trailing"/>
+                            <constraint id="7061" firstItem="394" firstAttribute="top" secondItem="205" secondAttribute="top" constant="150"/>
+                            <constraint id="7064" firstItem="205" firstAttribute="trailing" secondItem="395" secondAttribute="trailing"/>
+                            <constraint id="7065" firstItem="395" firstAttribute="top" secondItem="205" secondAttribute="top" constant="215"/>
+                            <constraint id="7068" firstItem="205" firstAttribute="trailing" secondItem="396" secondAttribute="trailing"/>
+                            <constraint id="7072" firstItem="396" firstAttribute="top" secondItem="868" secondAttribute="centerY" constant="273"/>
+                            <constraint id="7073" firstItem="205" firstAttribute="trailing" secondItem="397" secondAttribute="trailing"/>
+                            <constraint id="7077" firstItem="397" firstAttribute="top" secondItem="868" secondAttribute="centerY" constant="338"/>
+                            <constraint id="7078" firstItem="397" firstAttribute="centerX" secondItem="868" secondAttribute="centerX"/>
+                            <constraint id="7079" firstItem="396" firstAttribute="centerX" secondItem="868" secondAttribute="centerX"/>
+                            <constraint id="7080" firstItem="395" firstAttribute="centerX" secondItem="868" secondAttribute="centerX"/>
+                            <constraint id="7081" firstItem="394" firstAttribute="centerX" secondItem="868" secondAttribute="centerX"/>
+                            <constraint id="7082" firstItem="393" firstAttribute="centerX" secondItem="868" secondAttribute="centerX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Main" id="321" selectedImage="house-outline.png" image="house-outline.png"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="b_Awesome" destination="393" id="name-outlet-393"/>
+                        <outlet property="b_Good" destination="394" id="name-outlet-394"/>
+                        <outlet property="b_Mediocre" destination="395" id="name-outlet-395"/>
+                        <outlet property="b_Poor" destination="396" id="name-outlet-396"/>
+                        <outlet property="b_Terrible" destination="397" id="name-outlet-397"/>
+                        <outlet property="t_TitleRate" destination="6663" id="name-outlet-6663"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="206" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179" y="144"/>
+        </scene>
+        <scene sceneID="655">
+            <objects>
+                <viewController id="656" sceneMemberID="viewController" customClass="OptionsViewController" storyboardIdentifier="OptionsViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="653"/>
+                        <viewControllerLayoutGuide type="bottom" id="654"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="657">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" id="860" translatesAutoresizingMaskIntoConstraints="NO" text=" " userInteractionEnabled="NO" selectable="NO" editable="NO">
+                                <rect key="frame" x="5" y="-3" width="160" height="240"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="-20" width="320" height="54"/>
+                                    <mask key="constraints">
+                                        <include reference="1069"/>
+                                        <include reference="1070"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="1069" firstAttribute="width" constant="320"/>
+                                    <constraint id="1070" firstAttribute="height" constant="54"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1069"/>
+                                        <exclude reference="1070"/>
+                                    </mask>
+                                </variation>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="669" translatesAutoresizingMaskIntoConstraints="NO" customClass="UIButton">
+                                <rect key="frame" x="137" y="127" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <state key="normal" title="Change">
+                                    <color key="titleShadowColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="235" y="80" width="70" height="35"/>
+                                    <mask key="constraints">
+                                        <include reference="7135"/>
+                                        <include reference="7136"/>
+                                    </mask>
+                                </variation>
+                                <connections/>
+                                <constraints>
+                                    <constraint id="7135" firstAttribute="width" constant="70"/>
+                                    <constraint id="7136" firstAttribute="height" constant="35"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7135"/>
+                                        <exclude reference="7136"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="678" translatesAutoresizingMaskIntoConstraints="NO" customClass="UIButton">
+                                <rect key="frame" x="137" y="127" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <state key="normal" title="Change">
+                                    <color key="titleShadowColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="235" y="130" width="70" height="35"/>
+                                    <mask key="constraints">
+                                        <include reference="7140"/>
+                                        <include reference="7141"/>
+                                    </mask>
+                                </variation>
+                                <connections/>
+                                <constraints>
+                                    <constraint id="7140" firstAttribute="width" constant="70"/>
+                                    <constraint id="7141" firstAttribute="height" constant="35"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7140"/>
+                                        <exclude reference="7141"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="682" translatesAutoresizingMaskIntoConstraints="NO" text="Remove last data point" selectable="NO" editable="NO">
+                                <rect key="frame" x="35" y="88" width="160" height="240"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="15" y="240" width="280" height="35"/>
+                                    <mask key="constraints">
+                                        <include reference="7145"/>
+                                        <include reference="7146"/>
+                                    </mask>
+                                </variation>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                <constraints>
+                                    <constraint id="7145" firstAttribute="width" constant="280"/>
+                                    <constraint id="7146" firstAttribute="height" constant="35"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7145"/>
+                                        <exclude reference="7146"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="685" translatesAutoresizingMaskIntoConstraints="NO" customClass="UIButton">
+                                <rect key="frame" x="137" y="127" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleShadowColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="235" y="240" width="70" height="36"/>
+                                    <mask key="constraints">
+                                        <include reference="7157"/>
+                                        <include reference="7158"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="7157" firstAttribute="width" constant="70"/>
+                                    <constraint id="7158" firstAttribute="height" constant="36"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7157"/>
+                                        <exclude reference="7158"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="688" translatesAutoresizingMaskIntoConstraints="NO" text="Clear all data " editable="NO" selectable="NO">
+                                <rect key="frame" x="35" y="88" width="160" height="240"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="15" y="290" width="280" height="35"/>
+                                    <mask key="constraints">
+                                        <include reference="7151"/>
+                                        <include reference="7152"/>
+                                    </mask>
+                                </variation>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                <constraints>
+                                    <constraint id="7151" firstAttribute="width" constant="280"/>
+                                    <constraint id="7152" firstAttribute="height" constant="35"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7151"/>
+                                        <exclude reference="7152"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="691" translatesAutoresizingMaskIntoConstraints="NO" customClass="UIButton">
+                                <rect key="frame" x="137" y="127" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="235" y="290" width="70" height="36"/>
+                                    <mask key="constraints">
+                                        <include reference="7163"/>
+                                        <include reference="7164"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="7163" firstAttribute="width" constant="70"/>
+                                    <constraint id="7164" firstAttribute="height" constant="36"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7163"/>
+                                        <exclude reference="7164"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" id="1659" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="299" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="489781198.923447">
+                                    <!--Sat, 09 Jul 2016 18:19:58 GMT-->
+                                </date>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="225" width="320" height="150"/>
+                                    <mask key="constraints">
+                                        <include reference="7169"/>
+                                        <include reference="7170"/>
+                                    </mask>
+                                </variation>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <constraints>
+                                    <constraint id="7169" firstAttribute="width" constant="320"/>
+                                    <constraint id="7170" firstAttribute="height" constant="150"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7169"/>
+                                        <exclude reference="7170"/>
+                                    </mask>
+                                </variation>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6448" translatesAutoresizingMaskIntoConstraints="NO" customClass="UIButton">
+                                <rect key="frame" x="137" y="127" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="370" width="320" height="60"/>
+                                    <mask key="constraints">
+                                        <include reference="7113"/>
+                                        <include reference="7114"/>
+                                    </mask>
+                                </variation>
+                                <connections/>
+                                <constraints>
+                                    <constraint id="7113" firstAttribute="width" constant="320"/>
+                                    <constraint id="7114" firstAttribute="height" constant="60"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7113"/>
+                                        <exclude reference="7114"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Notification Times" lineBreakMode="tailTruncation" minimumFontSize="10" id="6645" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="106" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16862745098039217" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="20" width="320" height="45"/>
+                                    <mask key="constraints">
+                                        <include reference="6648"/>
+                                        <include reference="6649"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="6648" firstAttribute="width" constant="320"/>
+                                    <constraint id="6649" firstAttribute="height" constant="45"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6648"/>
+                                        <exclude reference="6649"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Data" lineBreakMode="tailTruncation" minimumFontSize="10" id="6651" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="106" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16862745098039217" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="180" width="320" height="45"/>
+                                    <mask key="constraints">
+                                        <include reference="7130"/>
+                                        <include reference="7131"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="7130" firstAttribute="width" constant="320"/>
+                                    <constraint id="7131" firstAttribute="height" constant="45"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7130"/>
+                                        <exclude reference="7131"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Start time: 12:00pm" lineBreakMode="tailTruncation" minimumFontSize="10" id="6683" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="73" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="15" y="81" width="280" height="35"/>
+                                    <mask key="constraints">
+                                        <include reference="7120"/>
+                                        <include reference="7121"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="7120" firstAttribute="width" constant="280"/>
+                                    <constraint id="7121" firstAttribute="height" constant="35"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7120"/>
+                                        <exclude reference="7121"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="End time: 12:00pm" lineBreakMode="tailTruncation" minimumFontSize="10" id="6689" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="73" y="171" width="42" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="15" y="131" width="280" height="35"/>
+                                    <mask key="constraints">
+                                        <include reference="7125"/>
+                                        <include reference="7126"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="7125" firstAttribute="width" constant="280"/>
+                                    <constraint id="7126" firstAttribute="height" constant="35"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7125"/>
+                                        <exclude reference="7126"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="669"/>
+                                <exclude reference="678"/>
+                                <exclude reference="682"/>
+                                <exclude reference="685"/>
+                                <exclude reference="688"/>
+                                <exclude reference="691"/>
+                                <exclude reference="860"/>
+                                <exclude reference="1659"/>
+                                <exclude reference="6448"/>
+                                <exclude reference="6645"/>
+                                <exclude reference="6651"/>
+                                <exclude reference="6683"/>
+                                <exclude reference="6689"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1067"/>
+                                <exclude reference="1068"/>
+                                <exclude reference="1071"/>
+                                <exclude reference="6646"/>
+                                <exclude reference="6647"/>
+                                <exclude reference="6650"/>
+                                <exclude reference="7111"/>
+                                <exclude reference="7112"/>
+                                <exclude reference="7115"/>
+                                <exclude reference="7118"/>
+                                <exclude reference="7119"/>
+                                <exclude reference="7122"/>
+                                <exclude reference="7123"/>
+                                <exclude reference="7124"/>
+                                <exclude reference="7127"/>
+                                <exclude reference="7128"/>
+                                <exclude reference="7129"/>
+                                <exclude reference="7132"/>
+                                <exclude reference="7133"/>
+                                <exclude reference="7134"/>
+                                <exclude reference="7137"/>
+                                <exclude reference="7138"/>
+                                <exclude reference="7139"/>
+                                <exclude reference="7142"/>
+                                <exclude reference="7143"/>
+                                <exclude reference="7147"/>
+                                <exclude reference="7148"/>
+                                <exclude reference="7149"/>
+                                <exclude reference="7153"/>
+                                <exclude reference="7154"/>
+                                <exclude reference="7155"/>
+                                <exclude reference="7159"/>
+                                <exclude reference="7160"/>
+                                <exclude reference="7161"/>
+                                <exclude reference="7165"/>
+                                <exclude reference="7166"/>
+                                <exclude reference="7167"/>
+                                <exclude reference="7168"/>
+                                <exclude reference="7171"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="669"/>
+                                <include reference="678"/>
+                                <include reference="682"/>
+                                <include reference="685"/>
+                                <include reference="688"/>
+                                <include reference="691"/>
+                                <include reference="860"/>
+                                <include reference="1659"/>
+                                <include reference="6448"/>
+                                <include reference="6645"/>
+                                <include reference="6651"/>
+                                <include reference="6683"/>
+                                <include reference="6689"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1067"/>
+                                <include reference="1068"/>
+                                <include reference="1071"/>
+                                <include reference="6646"/>
+                                <include reference="6647"/>
+                                <include reference="6650"/>
+                                <include reference="7111"/>
+                                <include reference="7112"/>
+                                <include reference="7115"/>
+                                <include reference="7118"/>
+                                <include reference="7119"/>
+                                <include reference="7122"/>
+                                <include reference="7123"/>
+                                <include reference="7124"/>
+                                <include reference="7127"/>
+                                <include reference="7128"/>
+                                <include reference="7129"/>
+                                <include reference="7132"/>
+                                <include reference="7133"/>
+                                <include reference="7134"/>
+                                <include reference="7137"/>
+                                <include reference="7138"/>
+                                <include reference="7139"/>
+                                <include reference="7142"/>
+                                <include reference="7143"/>
+                                <include reference="7147"/>
+                                <include reference="7148"/>
+                                <include reference="7149"/>
+                                <include reference="7153"/>
+                                <include reference="7154"/>
+                                <include reference="7155"/>
+                                <include reference="7159"/>
+                                <include reference="7160"/>
+                                <include reference="7161"/>
+                                <include reference="7165"/>
+                                <include reference="7166"/>
+                                <include reference="7167"/>
+                                <include reference="7168"/>
+                                <include reference="7171"/>
+                            </mask>
+                        </variation>
+                        <constraints>
+                            <constraint id="1067" firstItem="657" firstAttribute="trailing" secondItem="860" secondAttribute="trailing"/>
+                            <constraint id="1068" firstItem="860" firstAttribute="top" secondItem="657" secondAttribute="top" constant="-20"/>
+                            <constraint id="1071" firstItem="860" firstAttribute="centerX" secondItem="657" secondAttribute="centerX"/>
+                            <constraint id="6646" firstItem="657" firstAttribute="trailing" secondItem="6645" secondAttribute="trailing"/>
+                            <constraint id="6647" firstItem="6645" firstAttribute="top" secondItem="657" secondAttribute="top" constant="20"/>
+                            <constraint id="6650" firstItem="6645" firstAttribute="centerX" secondItem="860" secondAttribute="centerX"/>
+                            <constraint id="7111" firstItem="657" firstAttribute="trailing" secondItem="6448" secondAttribute="trailing"/>
+                            <constraint id="7112" firstItem="657" firstAttribute="bottom" secondItem="6448" secondAttribute="bottom" constant="50"/>
+                            <constraint id="7115" firstItem="6448" firstAttribute="centerX" secondItem="860" secondAttribute="centerX"/>
+                            <constraint id="7118" firstItem="6683" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
+                            <constraint id="7119" firstItem="6683" firstAttribute="top" secondItem="657" secondAttribute="top" constant="81"/>
+                            <constraint id="7122" firstItem="860" firstAttribute="centerX" secondItem="6683" secondAttribute="centerX" constant="5"/>
+                            <constraint id="7123" firstItem="6689" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
+                            <constraint id="7124" firstItem="6689" firstAttribute="top" secondItem="657" secondAttribute="top" constant="131"/>
+                            <constraint id="7127" firstItem="860" firstAttribute="centerX" secondItem="6689" secondAttribute="centerX" constant="5"/>
+                            <constraint id="7128" firstItem="657" firstAttribute="trailing" secondItem="6651" secondAttribute="trailing"/>
+                            <constraint id="7129" firstItem="6651" firstAttribute="top" secondItem="657" secondAttribute="top" constant="180"/>
+                            <constraint id="7132" firstItem="6651" firstAttribute="centerX" secondItem="860" secondAttribute="centerX"/>
+                            <constraint id="7133" firstItem="657" firstAttribute="trailing" secondItem="669" secondAttribute="trailing" constant="15"/>
+                            <constraint id="7134" firstItem="669" firstAttribute="top" secondItem="657" secondAttribute="top" constant="80"/>
+                            <constraint id="7137" firstItem="669" firstAttribute="centerX" secondItem="860" secondAttribute="centerX" constant="110"/>
+                            <constraint id="7138" firstItem="657" firstAttribute="trailing" secondItem="678" secondAttribute="trailing" constant="15"/>
+                            <constraint id="7139" firstItem="678" firstAttribute="top" secondItem="657" secondAttribute="top" constant="130"/>
+                            <constraint id="7142" firstItem="678" firstAttribute="centerX" secondItem="860" secondAttribute="centerX" constant="110"/>
+                            <constraint id="7143" firstItem="682" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
+                            <constraint id="7147" firstItem="860" firstAttribute="centerX" secondItem="682" secondAttribute="centerX" constant="5"/>
+                            <constraint id="7148" firstItem="682" firstAttribute="top" secondItem="860" secondAttribute="centerY" constant="233"/>
+                            <constraint id="7149" firstItem="688" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
+                            <constraint id="7153" firstItem="688" firstAttribute="top" secondItem="860" secondAttribute="centerY" constant="283"/>
+                            <constraint id="7154" firstItem="860" firstAttribute="centerX" secondItem="688" secondAttribute="centerX" constant="5"/>
+                            <constraint id="7155" firstItem="657" firstAttribute="trailing" secondItem="685" secondAttribute="trailing" constant="15"/>
+                            <constraint id="7159" firstItem="685" firstAttribute="top" secondItem="860" secondAttribute="centerY" constant="233"/>
+                            <constraint id="7160" firstItem="685" firstAttribute="centerX" secondItem="860" secondAttribute="centerX" constant="110"/>
+                            <constraint id="7161" firstItem="657" firstAttribute="trailing" secondItem="691" secondAttribute="trailing" constant="15"/>
+                            <constraint id="7165" firstItem="691" firstAttribute="top" secondItem="653" secondAttribute="bottom" constant="270"/>
+                            <constraint id="7166" firstItem="691" firstAttribute="centerX" secondItem="860" secondAttribute="centerX" constant="110"/>
+                            <constraint id="7167" firstItem="657" firstAttribute="trailing" secondItem="1659" secondAttribute="trailing"/>
+                            <constraint id="7168" firstItem="657" firstAttribute="bottom" secondItem="1659" secondAttribute="bottom" constant="105"/>
+                            <constraint id="7171" firstItem="1659" firstAttribute="centerX" secondItem="860" secondAttribute="centerX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Options" id="779" image="settings.png"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="b_TimeMin" destination="669" id="name-outlet-669"/>
+                        <outlet property="b_TimeMax" destination="678" id="name-outlet-678"/>
+                        <outlet property="b_RemoveLastDataPoint" destination="685" id="name-outlet-685"/>
+                        <outlet property="b_Clear" destination="691" id="name-outlet-691"/>
+                        <outlet property="v_TimePicker" destination="1659" id="name-outlet-1659"/>
+                        <outlet property="t_RemoveDataPoint" destination="682" id="name-outlet-682"/>
+                        <outlet property="t_Clear" destination="688" id="name-outlet-688"/>
+                        <outlet property="b_Save" destination="6448" id="name-outlet-6448"/>
+                        <outlet property="t_NotificationTitle" destination="6645" id="name-outlet-6645"/>
+                        <outlet property="t_DataTitle" destination="6651" id="name-outlet-6651"/>
+                        <outlet property="t_TimeMin" destination="6683" id="name-outlet-6683"/>
+                        <outlet property="t_TimeMax" destination="6689" id="name-outlet-6689"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="658" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-285" y="580"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house-outline.png" width="24" height="24"/>
+        <image name="menu-button.png" width="24" height="24"/>
+        <image name="Badge.png" width="575" height="575"/>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="settings.png" width="24" height="24"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

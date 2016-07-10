@@ -3,8 +3,6 @@ using UIKit;
 using SQLite;
 using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Productivity_Tracker_iOS
 {
@@ -26,6 +24,31 @@ namespace Productivity_Tracker_iOS
 
         public static int hourMin = 8, hourMax = 12 + 10;
         public static int minuteMin = 0, minuteMax = 0;
+
+        public override void OnActivated(UIApplication application)
+        {
+            if (UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone)
+            {
+                if (UIScreen.MainScreen.Bounds.Size.Height == 568.0)
+                {
+                    Window = new UIWindow(UIScreen.MainScreen.Bounds);
+                    UIStoryboard board = UIStoryboard.FromName("Main", null);
+                    UIViewController baslangic = (UIViewController)board.InstantiateViewController("TabBarController");
+
+                    Window.RootViewController = baslangic;
+                    Window.MakeKeyAndVisible();
+                }
+                else
+                {
+                    Window = new UIWindow(UIScreen.MainScreen.Bounds);
+                    UIStoryboard board = UIStoryboard.FromName("Main4s", null);
+                    UIViewController baslangic = (UIViewController)board.InstantiateViewController("TabBarController");
+
+                    Window.RootViewController = baslangic;
+                    Window.MakeKeyAndVisible();
+                }
+            }
+        }
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
