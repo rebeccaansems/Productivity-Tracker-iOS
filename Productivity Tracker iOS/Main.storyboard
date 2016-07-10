@@ -753,21 +753,21 @@
                                     <!--Sat, 09 Jul 2016 18:19:58 GMT-->
                                 </date>
                                 <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="0.0" y="242" width="320" height="225"/>
+                                    <rect key="frame" x="0.0" y="245" width="320" height="214"/>
                                     <mask key="constraints">
-                                        <include reference="6437"/>
-                                        <include reference="6438"/>
+                                        <include reference="6818"/>
+                                        <include reference="6819"/>
                                     </mask>
                                 </variation>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
                                 <constraints>
-                                    <constraint id="6437" firstAttribute="width" constant="320"/>
-                                    <constraint id="6438" firstAttribute="height" constant="225"/>
+                                    <constraint id="6818" firstAttribute="width" constant="320"/>
+                                    <constraint id="6819" firstAttribute="height" constant="214"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="6437"/>
-                                        <exclude reference="6438"/>
+                                        <exclude reference="6818"/>
+                                        <exclude reference="6819"/>
                                     </mask>
                                 </variation>
                             </datePicker>
@@ -933,8 +933,6 @@
                                 <exclude reference="1564"/>
                                 <exclude reference="1565"/>
                                 <exclude reference="1566"/>
-                                <exclude reference="6435"/>
-                                <exclude reference="6436"/>
                                 <exclude reference="6605"/>
                                 <exclude reference="6606"/>
                                 <exclude reference="6646"/>
@@ -949,6 +947,11 @@
                                 <exclude reference="6709"/>
                                 <exclude reference="6710"/>
                                 <exclude reference="6713"/>
+                                <exclude reference="6816"/>
+                                <exclude reference="6817"/>
+                                <exclude reference="6820"/>
+                                <exclude reference="6821"/>
+                                <exclude reference="6824"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -991,8 +994,6 @@
                                 <include reference="1564"/>
                                 <include reference="1565"/>
                                 <include reference="1566"/>
-                                <include reference="6435"/>
-                                <include reference="6436"/>
                                 <include reference="6605"/>
                                 <include reference="6606"/>
                                 <include reference="6646"/>
@@ -1007,6 +1008,11 @@
                                 <include reference="6709"/>
                                 <include reference="6710"/>
                                 <include reference="6713"/>
+                                <include reference="6816"/>
+                                <include reference="6817"/>
+                                <include reference="6820"/>
+                                <include reference="6821"/>
+                                <include reference="6824"/>
                             </mask>
                         </variation>
                         <constraints>
@@ -1033,8 +1039,6 @@
                             <constraint id="1564" firstItem="860" firstAttribute="centerX" secondItem="688" secondAttribute="centerX" constant="5"/>
                             <constraint id="1565" firstItem="688" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
                             <constraint id="1566" firstItem="688" firstAttribute="top" secondItem="860" secondAttribute="centerY" constant="303"/>
-                            <constraint id="6435" firstItem="657" firstAttribute="trailing" secondItem="1659" secondAttribute="trailing"/>
-                            <constraint id="6436" firstItem="657" firstAttribute="bottom" secondItem="1659" secondAttribute="bottom" constant="101"/>
                             <constraint id="6605" firstItem="657" firstAttribute="trailing" secondItem="6448" secondAttribute="trailing"/>
                             <constraint id="6606" firstItem="657" firstAttribute="bottom" secondItem="6448" secondAttribute="bottom" constant="50"/>
                             <constraint id="6646" firstItem="657" firstAttribute="trailing" secondItem="6645" secondAttribute="trailing"/>
@@ -1049,6 +1053,11 @@
                             <constraint id="6709" firstItem="6689" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
                             <constraint id="6710" firstItem="6689" firstAttribute="top" secondItem="657" secondAttribute="top" constant="131"/>
                             <constraint id="6713" firstItem="860" firstAttribute="centerX" secondItem="6689" secondAttribute="centerX" constant="5"/>
+                            <constraint id="6816" firstItem="657" firstAttribute="trailing" secondItem="1659" secondAttribute="trailing"/>
+                            <constraint id="6817" firstItem="657" firstAttribute="bottom" secondItem="1659" secondAttribute="bottom" constant="109"/>
+                            <constraint id="6820" firstItem="1659" firstAttribute="centerX" secondItem="860" secondAttribute="centerX"/>
+                            <constraint id="6821" firstItem="1659" firstAttribute="top" secondItem="860" secondAttribute="centerY" constant="238"/>
+                            <constraint id="6824" firstItem="6448" firstAttribute="centerX" secondItem="860" secondAttribute="centerX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Options" id="779" image="settings.png"/>

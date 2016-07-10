@@ -29,10 +29,10 @@ namespace Productivity_Tracker_iOS
         {
             if (UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone)
             {
-                if (UIScreen.MainScreen.Bounds.Size.Height == 568.0)
+                if (UIScreen.MainScreen.Bounds.Size.Height == 480)
                 {
                     Window = new UIWindow(UIScreen.MainScreen.Bounds);
-                    UIStoryboard board = UIStoryboard.FromName("Main", null);
+                    UIStoryboard board = UIStoryboard.FromName("Main4s", null);
                     UIViewController baslangic = (UIViewController)board.InstantiateViewController("TabBarController");
 
                     Window.RootViewController = baslangic;
@@ -41,7 +41,7 @@ namespace Productivity_Tracker_iOS
                 else
                 {
                     Window = new UIWindow(UIScreen.MainScreen.Bounds);
-                    UIStoryboard board = UIStoryboard.FromName("Main4s", null);
+                    UIStoryboard board = UIStoryboard.FromName("Main", null);
                     UIViewController baslangic = (UIViewController)board.InstantiateViewController("TabBarController");
 
                     Window.RootViewController = baslangic;
@@ -84,7 +84,7 @@ namespace Productivity_Tracker_iOS
                 minuteMin = times.MinMinute;
                 minuteMax = times.MaxMinute;
             }
-
+            addData();
             return true;
         }
 
@@ -131,6 +131,18 @@ namespace Productivity_Tracker_iOS
             times.MaxMinute = minuteMax;
             db.DeleteAll<MinMaxTimes>();
             db.Insert(times);
+        }
+
+        void addData()
+        {
+            Random r = new Random();
+            for (int i = 0; i < 40; i++)
+            {
+                int hour = r.Next(0, 24);
+                int level = r.Next(1, 5);
+                ProductiveData p_Data = new ProductiveData { DateHour = hour, DateDay = DateTime.Now.Day, DateMonth = DateTime.Now.Month, ProdutivityLevel = level };
+                AppDelegate.db.Insert(p_Data);
+            }
         }
     }
 }

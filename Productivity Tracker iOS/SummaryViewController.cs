@@ -14,7 +14,7 @@ namespace Productivity_Tracker_iOS
         public SummaryViewController(IntPtr handle) : base(handle)
         {
         }
-
+        
         public override void ViewDidAppear(Boolean animated)
         {
             base.ViewDidLoad();
