@@ -877,18 +877,18 @@
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <rect key="frame" x="15" y="131" width="280" height="35"/>
                                     <mask key="constraints">
-                                        <include reference="6694"/>
-                                        <include reference="6695"/>
+                                        <include reference="6711"/>
+                                        <include reference="6712"/>
                                     </mask>
                                 </variation>
                                 <constraints>
-                                    <constraint id="6694" firstAttribute="width" constant="280"/>
-                                    <constraint id="6695" firstAttribute="height" constant="35"/>
+                                    <constraint id="6711" firstAttribute="width" constant="280"/>
+                                    <constraint id="6712" firstAttribute="height" constant="35"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="6694"/>
-                                        <exclude reference="6695"/>
+                                        <exclude reference="6711"/>
+                                        <exclude reference="6712"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -946,9 +946,9 @@
                                 <exclude reference="6684"/>
                                 <exclude reference="6685"/>
                                 <exclude reference="6688"/>
-                                <exclude reference="6692"/>
-                                <exclude reference="6693"/>
-                                <exclude reference="6696"/>
+                                <exclude reference="6709"/>
+                                <exclude reference="6710"/>
+                                <exclude reference="6713"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1004,9 +1004,9 @@
                                 <include reference="6684"/>
                                 <include reference="6685"/>
                                 <include reference="6688"/>
-                                <include reference="6692"/>
-                                <include reference="6693"/>
-                                <include reference="6696"/>
+                                <include reference="6709"/>
+                                <include reference="6710"/>
+                                <include reference="6713"/>
                             </mask>
                         </variation>
                         <constraints>
@@ -1046,9 +1046,9 @@
                             <constraint id="6684" firstItem="6683" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
                             <constraint id="6685" firstItem="6683" firstAttribute="top" secondItem="657" secondAttribute="top" constant="81"/>
                             <constraint id="6688" firstItem="860" firstAttribute="centerX" secondItem="6683" secondAttribute="centerX" constant="5"/>
-                            <constraint id="6692" firstItem="6689" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
-                            <constraint id="6693" firstItem="6689" firstAttribute="top" secondItem="657" secondAttribute="top" constant="131"/>
-                            <constraint id="6696" firstItem="860" firstAttribute="centerX" secondItem="6689" secondAttribute="centerX" constant="5"/>
+                            <constraint id="6709" firstItem="6689" firstAttribute="leading" secondItem="657" secondAttribute="leading" constant="15"/>
+                            <constraint id="6710" firstItem="6689" firstAttribute="top" secondItem="657" secondAttribute="top" constant="131"/>
+                            <constraint id="6713" firstItem="860" firstAttribute="centerX" secondItem="6689" secondAttribute="centerX" constant="5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Options" id="779" image="settings.png"/>

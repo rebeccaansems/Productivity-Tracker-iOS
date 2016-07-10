@@ -38,7 +38,7 @@
                         <constraint id="581" firstAttribute="height" constant="40"/>
                     </constraints>
                 </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="526" translatesAutoresizingMaskIntoConstraints="NO" editable="NO" selectable="NO" text="How productive do you feel?" textAlignment="center">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="526" translatesAutoresizingMaskIntoConstraints="NO" editable="NO" selectable="NO" text="When do you work best?" textAlignment="center">
                     <rect key="frame" x="0.0" y="140" width="480" height="32"/>
                     <color key="backgroundColor" colorSpace="calibratedRGB" red="0.16078431372549021" green="0.50196078431372548" blue="0.72549019607843135" alpha="1"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
