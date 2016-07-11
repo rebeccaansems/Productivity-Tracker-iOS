@@ -63,7 +63,7 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
             <constraints>
                 <constraint id="574" firstItem="iN0-l3-epB" firstAttribute="trailing" secondItem="8ie-xW-0ye" secondAttribute="trailing"/>
                 <constraint id="575" firstItem="iN0-l3-epB" firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20"/>

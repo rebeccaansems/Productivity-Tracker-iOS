@@ -42,7 +42,7 @@ namespace Productivity_Tracker_iOS
                 numberOfDataPoints++;
             }
 
-            if (numberOfDataPoints > 30)
+            if (numberOfDataPoints >= 30)
             {
                 Tuple<List<Tuple<int, float>>, List<Tuple<int, float>>> bestWorstProd =
                     CalculateBestWorstTimes(CalculateAverage(productivityHour));
@@ -97,7 +97,7 @@ namespace Productivity_Tracker_iOS
             else
             {
                 t_SummaryMost.Text = "To ensure accuracy, you have to have a minumum of 30 data points and at least 2 data points for any specific time.";
-                t_SummaryLeast.Text = "Currently you have " + numberOfDataPoints + " data point/s.";
+                t_SummaryLeast.Text = "Currently you have " + numberOfDataPoints + " data points.";
             }
         }
 

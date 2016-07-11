@@ -84,7 +84,6 @@ namespace Productivity_Tracker_iOS
                 minuteMin = times.MinMinute;
                 minuteMax = times.MaxMinute;
             }
-            addData();
             return true;
         }
 
@@ -131,18 +130,6 @@ namespace Productivity_Tracker_iOS
             times.MaxMinute = minuteMax;
             db.DeleteAll<MinMaxTimes>();
             db.Insert(times);
-        }
-
-        void addData()
-        {
-            Random r = new Random();
-            for (int i = 0; i < 40; i++)
-            {
-                int hour = r.Next(0, 24);
-                int level = r.Next(1, 5);
-                ProductiveData p_Data = new ProductiveData { DateHour = hour, DateDay = DateTime.Now.Day, DateMonth = DateTime.Now.Month, ProdutivityLevel = level };
-                AppDelegate.db.Insert(p_Data);
-            }
         }
     }
 }
