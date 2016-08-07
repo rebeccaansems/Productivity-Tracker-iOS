@@ -7,9 +7,9 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.RebeccaAnsems.ProductivityTracker</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
@@ -35,9 +35,6 @@
 		<string>Icon@2x.png</string>
 		<string>Icon.png</string>
 		<string>Icon-60@2x.png</string>
-		<string>Default.png</string>
-		<string>Default@2x.png</string>
-		<string>Default-568h@2x.png</string>
 		<string>Icon-Small@2x.png</string>
 		<string>Icon-Small.png</string>
 		<string>Icon-Small-40@2x.png</string>

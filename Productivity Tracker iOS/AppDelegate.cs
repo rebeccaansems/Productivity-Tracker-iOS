@@ -25,6 +25,8 @@ namespace Productivity_Tracker_iOS
         public static int hourMin = 8, hourMax = 12 + 10;
         public static int minuteMin = 0, minuteMax = 0;
 
+        private UILocalNotification notification;
+
         public override void OnActivated(UIApplication application)
         {
             if (UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone)
@@ -48,14 +50,14 @@ namespace Productivity_Tracker_iOS
                     Window.MakeKeyAndVisible();
                 }
             }
+
         }
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
             //do you want notifications?
-            var settings = UIUserNotificationSettings.GetSettingsForTypes(UIUserNotificationType.Alert, null);
+            var settings = UIUserNotificationSettings.GetSettingsForTypes(UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, null);
             UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
-            UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
             UIApplication.SharedApplication.CancelAllLocalNotifications();
 
             //load database
@@ -84,18 +86,20 @@ namespace Productivity_Tracker_iOS
                 minuteMin = times.MinMinute;
                 minuteMax = times.MaxMinute;
             }
+
             return true;
         }
 
         public override void DidEnterBackground(UIApplication application)
         {
-
-            //remove old notifications
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
-            UIApplication.SharedApplication.CancelAllLocalNotifications();
+            notification = new UILocalNotification();
 
-            //create/schedule notification
-            UILocalNotification notification = new UILocalNotification();
+            //notification.AlertTitle = "Productivity Tracker"; // required for Apple Watch notifications
+            notification.AlertAction = "Log productivity";
+            notification.AlertBody = "How productive are you feeling?";
+            notification.ApplicationIconBadgeNumber = 1;
+
             DateTime hourHalfFromNow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 10, 30, 0);
 
             if (DateTime.Now.Hour + 1 <= hourMax)
@@ -116,10 +120,6 @@ namespace Productivity_Tracker_iOS
 
             notification.FireDate = NSDate.FromTimeIntervalSinceNow(hourHalfFromNow.Subtract(DateTime.Now).TotalSeconds);
 
-            //notification.AlertTitle = "Productivity Tracker"; // required for Apple Watch notifications
-            notification.AlertAction = "Log productivity";
-            notification.AlertBody = "How productive are you feeling?";
-            notification.ApplicationIconBadgeNumber = 1;
             UIApplication.SharedApplication.ScheduleLocalNotification(notification);
 
             //Save min/max times in database
